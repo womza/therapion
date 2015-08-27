@@ -1,0 +1,7 @@
+User-agent: Linguee 
+Disallow: /
+
+User-agent: *
+Disallow:
+
+sitemap: http://www.therapion.com/sitemap.xml

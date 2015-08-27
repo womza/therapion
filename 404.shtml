@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Error 404: Page not available</title>
+</head>
+<body bgcolor="#dddddd">
+<br /><br /><br />
+<table border="0" cellpadding="3" cellspacing="0" align="center" bgcolor="#ffffff" style="border: 1px solid #900">
+<tr>
+    <td bgcolor="#990000"><div style="font-weight: bold; color: #fff;"><a href="http://www.therapion.com"> <img src="./images/logo.jpg" width="15" height="10" alt="Therapion.com - Online Therapy and Counseling"></a> Therapion.com - The page you requested is not available</div></td>
+</tr>
+<tr>
+    <td>
+  
+<div style="font-weight: bold; color: #000;">
+The page you are looking cannot be found / error 404</div>
+<p>
+<!--#if expr="$HTTP_REFERER" -->
+<br />The link on <a href="<!--#echo encoding="url" var="HTTP_REFERER" -->"><!--#echo encoding="url" var="HTTP_REFERER" --></a> seems to be wrong or outdated.<br /><br />
+Please inform the author of
+    <a href="<!--#echo encoding="url" var="HTTP_REFERER" -->">that page</a>
+    about the error.
+
+  <!--#else -->
+
+    If you entered the URL manually please check your
+    spelling and try again. 
+
+  <!--#endif -->
+
+</p>
+<p>
+Sorry for the inconvenience. 
+<br />
+<br />
+<b>Servicio en español:</b> <a href="http://www.therapion.com/es">www.therapion.com/es</a>
+<br />
+<br />
+<b>BACK TO OUR HOMEPAGE: <a href="http://www.therapion.com">www.therapion.com</a></b> 
+</p>
+    </td>
+</tr>
+</table>
+</body>
+</html>

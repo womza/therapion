@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Error 404: Page not available</title>
+</head>
+<body bgcolor="#dddddd">
+<br /><br /><br />
+<table border="0" cellpadding="3" cellspacing="0" align="center" bgcolor="#ffffff" style="border: 1px solid #900">
+<tr>
+    <td bgcolor="#990000"><div style="font-weight: bold; color: #fff;">The page you requested is not available. / Error 404</div></td>
+</tr>
+<tr>
+    <td>
+    <p>Please check the url of the page you'd like to visit.<br />
+
+        <br />
+</p>
+
+<div style="font-weight: bold; color: #000;">
+The page you are looking cannot be found / error 404</div>
+<p>The requested URL was not found on this server.
+
+
+
+<!--#else -->
+
+    If you entered the URL manually please check your
+    spelling and try again. 
+
+  <!--#endif -->
+
+</p>
+<p>
+Sorry for the inconvenience. Para servicio en español: <a href="http://www.therapion.com/es">www.therapion.com/es</a> 
+</p>
+    </td>
+</tr>
+</table>
+<center>Back to our main page: <a href="http://www.therapion.com">www.therapion.com</a></center>
+</body>
+</html>
+
