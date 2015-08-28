@@ -1,5 +1,11 @@
 <?php
 require_once 'db_conn.php';
+require_once 'function.php';
+
+// if $_GET['id_psicologo'] isn't defined get the name $_GET['p']
+if (!isset($_GET['id_psicologo']))
+    $_GET['id_psicologo'] = get_psicologo_id_by_name($_GET['p']);
+
 $psicologo=get_psicologo($_GET['id_psicologo']);
 $metodos=get_psicologo_metodos($_GET['id_psicologo']); 
 ?>
