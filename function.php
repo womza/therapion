@@ -19,3 +19,11 @@ function get_psicologo_id_by_name($name,$charset='utf-8') {
 function get_url_by_psicologo_name($name) {
     return str_replace(array(' ', '.'), array('-', ''), $name);
 }
+
+function get_psicologo_name_url($psicologo) {
+    return strtolower(get_url_by_psicologo_name(trim($psicologo['nombres_apellidos'])));
+}
+
+// if $_GET['id_psicologo'] isn't defined get the name $_GET['p']
+if (!isset($_GET['id_psicologo']) && isset($_GET['p']))
+    $_GET['id_psicologo'] = get_psicologo_id_by_name($_GET['p']);

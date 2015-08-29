@@ -4,6 +4,7 @@
 	<?php include './common/head-tag.php'; 
 		require_once 'db_conn.php';		
 		$psicologo=get_psicologo($_GET['id_psicologo']);
+		$psicologo_name = get_psicologo_name_url($psicologo);
 	?>
 	<title>Chat counseling</title> 
 	<meta name="keywords" content="">
@@ -22,14 +23,14 @@
 					<div class="info">
 						 
 					 	<div class="photo rgt">
-							<img src="./assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">
+							<img src="<?php echo BASE_URL ?>/assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">
 						</div>
 						
 						<h1>
                                                 <?php echo $psicologo['nombres_apellidos'] ?> - <?php echo $psicologo['titulo'] ?>
 						</h1>
 						
-						<form method="POST" action="./sendchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">
+						<form method="POST" action="<?php echo BASE_URL ?>/sendchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">
 						
 							<h3>Chat counseling </h3>     
 						    

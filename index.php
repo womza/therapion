@@ -1,3 +1,4 @@
+<?php require_once 'db_conn.php'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -65,78 +66,78 @@ We offer private online counseling sessions by email, chat, phone, and video con
 						<div id="switcher-lang-scd">
 						<ul>
 							<li  class="first">
-								<a href="http://www.therapion.com"> 
+								<a href="<?php echo BASE_URL ?>"> 
 									<img src="./assets/images/flag_en.png" title="English">
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/es"> 
+								<a href="<?php echo BASE_URL ?>/es"> 
 									<img src="./assets/images/flag_es.png" title="Español">
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/pt"> 
+								<a href="<?php echo BASE_URL ?>/pt"> 
 									<img src="./assets/images/flag_pt.png" title="Português">
 								</a>  
 							</li>
 
                                                         <li>
-								<a href="http://www.therapion.com/fi"> 
+								<a href="<?php echo BASE_URL ?>/fi"> 
 									<img src="./assets/images/flag_fi.png" title="Suomi">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/se"> 
+								<a href="<?php echo BASE_URL ?>/se"> 
 									<img src="./assets/images/flag_se.png" title="Svenska">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/no"> 
+								<a href="<?php echo BASE_URL ?>/no"> 
 									<img src="./assets/images/flag_no.png" title="Norsk">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/dk"> 
+								<a href="<?php echo BASE_URL ?>/dk"> 
 									<img src="./assets/images/flag_dk.png" title="Dansk">
 								</a>  
 							</li>
                             <li>
-								<a href="http://www.therapion.com/de"> 
+								<a href="<?php echo BASE_URL ?>/de"> 
 									<img src="./assets/images/flag_de.png" title=Deutsch>
 								</a>  
 							</li>
                                                         <li>
-								<a href="http://www.therapion.com/nl"> 
+								<a href="<?php echo BASE_URL ?>/nl"> 
 									<img src="./assets/images/flag_nl.png" title="Nederlands">
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/fr"> 
+								<a href="<?php echo BASE_URL ?>/fr"> 
 									<img src="./assets/images/flag_fr.png" title="Français">
 								</a>  
 							</li>													
 							<li>
-								<a href="http://www.therapion.com/it"> 
+								<a href="<?php echo BASE_URL ?>/it"> 
 									<img src="./assets/images/flag_it.png" title="Italiano">
 								</a>  
 							</li>							
 							<li>
-								<a href="http://www.therapion.com/ru"> 
+								<a href="<?php echo BASE_URL ?>/ru"> 
 									<img src="./assets/images/flag_ru.png" title="&#1055;&#1086;-&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/tr"> 
+								<a href="<?php echo BASE_URL ?>/tr"> 
 									<img src="./assets/images/flag_tr.png" title="Türkçe">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/jp"> 
+								<a href="<?php echo BASE_URL ?>/jp"> 
 									<img src="./assets/images/flag_jp.png" title="&#26085;&#26412;&#35486;"> 
 								</a>							
 							</li>										
 							<li  class="last">
-								<a href="http://www.therapion.com/cn"> 
+								<a href="<?php echo BASE_URL ?>/cn"> 
 									<img src="./assets/images/flag_hk.png" title="&#20013;&#25991;">
 								</a>  
 							</li>						
@@ -211,7 +212,11 @@ This is particularly useful when high levels of shame or embarrassment make it h
 						<div class="profile">
 							<div class="photo lft">
 								<img src="./assets/images/profiles/mike.jpg" height="150" width="100">
-								<a class="standardsButton " href="./bookwith.php?id_psicologo=10">Book with me</a>
+								<?php
+								$psicologo=get_psicologo(10);
+								$psicologo_name = get_psicologo_name_url($psicologo);
+								?>
+								<a class="standardsButton " href="<?php echo BASE_URL.'/'.$psicologo_name ?>">Book with me</a>
 							</div>	
 
 							<p>

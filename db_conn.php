@@ -1,7 +1,7 @@
 <?php
 function get_credentials()
 {
-	$configs=array('site_root'=>'therapion.local',
+	$configs=array('site_root'=>'http://therapion.local',
 				 'db_settings'=>array('host'=>'localhost',
 					   				  'db_name'=>'therapio_therapion',
 					   				  'username'=>'root',
@@ -54,4 +54,8 @@ function get_equipo($id_equipo)
 	$result = $conn->query($sql);
 	return $result->fetch_assoc();
 }
-?>
+
+
+include $_SERVER['DOCUMENT_ROOT'] . '/function.php';
+/* Define BASE_URL */
+define('BASE_URL', get_credentials()['site_root']);
