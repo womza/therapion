@@ -1,16 +1,15 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+	IndexOptions +Charset=UTF-8
 	DirectoryIndex index.php index.html
 
+	RewriteBase /
+
     ### English ###
-    RewriteRule ^([a-z-]+)/?$ bookwith.php?p=$1
-    RewriteRule ^([a-z-]+)/email?$ formemail.php?p=$1
-    RewriteRule ^([a-z-]+)/chat?$ formchat.php?p=$1
-    RewriteRule ^([a-z-]+)/videoconference?$ formvideoconference.php?p=$1
-    RewriteRule ^([a-z-]+)/phone?$ formphone.php?p=$1
-
-
-    ### Spanish ###
-
+    RewriteRule ^([a-z-]+)$ bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/email$ formemail.php?p=$1
+    RewriteRule ^([a-z-]+)/chat$ formchat.php?p=$1
+    RewriteRule ^([a-z-]+)/videoconference$ formvideoconference.php?p=$1
+    RewriteRule ^([a-z-]+)/phone$ formphone.php?p=$1
 </IfModule>

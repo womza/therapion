@@ -14,7 +14,7 @@
 				
 				<div id="icon-menu"></div>	
 					<div id="logo">
-							<a href="./" title="Bienvenido a Therapion Consulting. Therapion.com - Atención psicológica por Internet.">
+							<a href="<?php echo BASE_URL ?>/es" title="Bienvenido a Therapion Consulting. Therapion.com - Atención psicológica por Internet.">
 								Therapion
 								<span></span>
 							</a>
@@ -29,101 +29,101 @@
 		<div class="inner">			
 			<div id="main-nav" >
 				<ul>
-					<li><a href="./">Inicio</a></li>
-					<li><a href="./consultas.php">Reservar Consulta</a></li>
-					<li><a href="./costo.php">Precios</a></li>
-					<li><a href="./servicios.php">Servicios</a></li>
-					<li><a href="./empleos.php">Empleos</a></li>
+					<li><a href="<?php echo BASE_URL ?>/es">Inicio</a></li>
+					<li><a href="<?php echo BASE_URL ?>/es/consultas.php">Reservar Consulta</a></li>
+					<li><a href="<?php echo BASE_URL ?>/es/costo.php">Precios</a></li>
+					<li><a href="<?php echo BASE_URL ?>/es/servicios.php">Servicios</a></li>
+					<li><a href="<?php echo BASE_URL ?>/es/empleos.php">Empleos</a></li>
 					<li class="last"><a href="#">Idioma</a>
 						<div>
 						<ul>
 							<li  class="first">
-								<a href="http://www.therapion.com"> 
+								<a href="<?php echo BASE_URL ?>"> 
 									<img src="../assets/images/flag_en.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="English"> 
 									English
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/es"> 
+								<a href="<?php echo BASE_URL ?>/es"> 
 									<img src="../assets/images/flag_es.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Español"> 
 									Español
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/pt"> 
+								<a href="<?php echo BASE_URL ?>/pt"> 
 									<img src="../assets/images/flag_pt.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Português"> 
 									Português
 								</a>  
 							</li>
 
                                                         <li>
-								<a href="http://www.therapion.com/fi"> 
+								<a href="<?php echo BASE_URL ?>/fi"> 
 									<img src="../assets/images/flag_fi.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Suomi"> 
 									Suomi
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/se"> 
+								<a href="<?php echo BASE_URL ?>/se"> 
 									<img src="../assets/images/flag_se.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Svenska"> 
 									Svenska
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/no"> 
+								<a href="<?php echo BASE_URL ?>/no"> 
 									<img src="../assets/images/flag_no.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Norsk"> 
 									Norsk
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/dk"> 
+								<a href="<?php echo BASE_URL ?>/dk"> 
 									<img src="../assets/images/flag_dk.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Dansk"> 
 									Dansk
 								</a>  
 							</li>
                                                         <li>
-								<a href="http://www.therapion.com/de"> 
+								<a href="<?php echo BASE_URL ?>/de"> 
 									<img src="../assets/images/flag_de.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title=Deutsch> 
 									Deutsch
 								</a>  
 							</li>
                                                         <li>
-								<a href="http://www.therapion.com/nl"> 
+								<a href="<?php echo BASE_URL ?>/nl"> 
 									<img src="../assets/images/flag_nl.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Nederlands"> 
 									Nederlands
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/fr"> 
+								<a href="<?php echo BASE_URL ?>/fr"> 
 									<img src="../assets/images/flag_fr.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Français"> 
 									Français
 								</a>  
 							</li>													
 							<li>
-								<a href="http://www.therapion.com/it"> 
+								<a href="<?php echo BASE_URL ?>/it"> 
 									<img src="../assets/images/flag_it.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Italiano"> 
 									Italiano
 								</a>  
 							</li>							
 							<li>
-								<a href="http://www.therapion.com/ru"> 
+								<a href="<?php echo BASE_URL ?>/ru"> 
 									<img src="../assets/images/flag_ru.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="&#1055;&#1086;-&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;"> 
 									&#1055;&#1086;-&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/tr"> 
+								<a href="<?php echo BASE_URL ?>/tr"> 
 									<img src="../assets/images/flag_tr.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Türkçe"> 
 									Türkçe
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/jp"> 
+								<a href="<?php echo BASE_URL ?>/jp"> 
 									<img src="../assets/images/flag_jp.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="&#26085;&#26412;&#35486;"> 
 									&#26085;&#26412;&#35486;
 								</a>							
 							</li>										
 							<li  class="last">
-								<a href="http://www.therapion.com/cn"> 
+								<a href="<?php echo BASE_URL ?>/cn"> 
 									<img src="../assets/images/flag_hk.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="&#20013;&#25991;"> 
 									 &#20013;&#25991;
 								</a>  

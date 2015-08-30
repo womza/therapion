@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	AddDefaultCharset ISO-8859-1
+	DirectoryIndex index.php index.html
+
+	RewriteBase /es
+
+    ### Spanish ###
+    RewriteRule ^([a-z-]+)$ /es/bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/correo$ /es/formemail.php?p=$1
+    RewriteRule ^([a-z-]+)/chat$ /es/formchat.php?p=$1
+    RewriteRule ^([a-z-]+)/videoconferencia$ /es/formvideoconference.php?p=$1
+    RewriteRule ^([a-z-]+)/telefono$ /es/formphone.php?p=$1
+</IfModule>

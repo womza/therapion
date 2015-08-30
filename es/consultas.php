@@ -1,3 +1,4 @@
+<?php require_once('../db_conn.php'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -45,21 +46,22 @@
 				<div class="half-column">
 					<div class="info">
 
-						<?php require_once('../db_conn.php');
+						<?php
 						$psicologos=get_psicologos('first',2);
 						$i=0;
 						//echo print_r($psicologos);
 						while($psicologo=$psicologos->fetch_array(MYSQLI_ASSOC)):
+							$psicologo_name = get_psicologo_name_url($psicologo);
 						 ?>
 						
 						<div class="profile">
  
  							<div class="photo <?php echo ($i==0)?'lft':'rgt' ?>">
 								<img src="../assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">							 
-								<a class="standardsButton " href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Pedir cita</a>
+								<a class="standardsButton " href="<?php echo BASE_URL.'/es/'.$psicologo_name ?>">Pedir cita</a>
 							</div>
 							
-							<h4><a href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
+							<h4><a href="<?php echo BASE_URL.'/es/'.$psicologo_name ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
 							
 							<p> 
                                                         <b> 
@@ -99,21 +101,22 @@
 				<div class="half-column">
 					<div class="info">
  
-                                          <?php require_once('../db_conn.php');
+                                          <?php
 						$psicologos=get_psicologos('second',2);
 						$i=0;
 						//echo print_r($psicologos);
 						while($psicologo=$psicologos->fetch_array(MYSQLI_ASSOC)):
+							$psicologo_name = get_psicologo_name_url($psicologo);
 						 ?>
 						
 						<div class="profile">
  
  							<div class="photo <?php echo ($i==0)?'lft':'rgt' ?>">
 								<img src="../assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">							 
-								<a class="standardsButton " href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Pedir cita</a>
+								<a class="standardsButton " href="<?php echo BASE_URL.'/es/'.$psicologo_name ?>">Pedir cita</a>
 							</div>
 							
-							<h4><a href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
+							<h4><a href="<?php echo BASE_URL.'/es/'.$psicologo_name ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
 							
 							 
                                                         <p> 
