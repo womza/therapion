@@ -44,9 +44,9 @@ $psicologo_name = get_psicologo_name_url($psicologo);
 							<?php elseif ($metodo['titulo']=='chat'): ?>
 							<a class="standardsButton" href="<?php echo BASE_URL.'/es/'.$psicologo_name.'/chat'?>">Consulta por <br />Chat</a> 
 							<?php elseif ($metodo['titulo']=='phone'): ?>
-							<a class="standardsButton wm" href="<?php echo BASE_URL.'/es/'.$psicologo_name.'/videoconferencia'?>">Consulta por <br />Teléfono</a> 
+							<a class="standardsButton wm" href="<?php echo BASE_URL.'/es/'.$psicologo_name.'/telefono'?>">Consulta por <br />Teléfono</a> 
 							<?php else: ?>
-							<a class="standardsButton wm" href="<?php echo BASE_URL.'/es/'.$psicologo_name.'/telefono'?>">Consulta por <br />Videoconferencia</a>
+							<a class="standardsButton wm" href="<?php echo BASE_URL.'/es/'.$psicologo_name.'/videoconferencia'?>">Consulta por <br />Videoconferencia</a>
 						<?php endif; endforeach; ?>
 						</div>
 					</div>
