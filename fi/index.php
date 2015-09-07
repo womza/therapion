@@ -109,7 +109,7 @@ on tehokas johdatus aiheeseen ja antaa tarvittavat perustiedot netissä toimimise
 
 <p>
 <b>
-Huom! Seuraava nettikurssi: 26.- 27.8.2015, klo 18.00 - 20.00
+Huom! Seuraava nettikurssi: 26.- 27.9.2015, klo 18.00 - 20.00
 </b>
 </p>
 

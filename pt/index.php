@@ -91,7 +91,7 @@
                                                  <br />
                                                  Custo: 80 EUR / 88 USD / 280 BRL (tudo incluído) / aluno
                                                  <br />
-                                                 Datas: 26. - 27. de agosto, 2015 
+                                                 Datas: 26. - 27. de setembro, 2015 
                                                  <br />
                                                  Horas: 18.00 – 20.00 (Lisboa, Portugal) / 14.00 – 16.00 (Rio de Janeiro, Brasil) / 18.00 - 20.00 (Luanda, Angola)
                                                  </p>

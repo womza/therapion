@@ -1,8 +1,7 @@
 <?php
 require_once 'db_conn.php';
 $psicologo=get_psicologo($_GET['id_psicologo']);
-$metodos=get_psicologo_metodos($_GET['id_psicologo']);
-$psicologo_name = get_psicologo_name_url($psicologo);
+$metodos=get_psicologo_metodos($_GET['id_psicologo']); 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -27,7 +26,7 @@ $psicologo_name = get_psicologo_name_url($psicologo);
 					<div class="info">
 					
 						<div class="photo rgt">
-							<img src="<?php echo BASE_URL ?>/assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">
+							<img src="./assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">
 						</div>
 											
 						<h1><?php echo $psicologo['nombres_apellidos'] ?> - <?php echo $psicologo['titulo'] ?></h1>
@@ -40,13 +39,13 @@ $psicologo_name = get_psicologo_name_url($psicologo);
 						<div class="wrap-buttons">	
 							<?php foreach($metodos as $metodo): 
 							if($metodo['titulo']=='email'):?>											
-							<a class="standardsButton" href="<?php echo BASE_URL.'/'.$psicologo_name.'/email'?>">E-mail<br />counseling</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/formemail.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">E-mail<br />counseling</a> 
 							<?php elseif ($metodo['titulo']=='chat'): ?>
-							<a class="standardsButton" href="<?php echo BASE_URL.'/'.$psicologo_name.'/chat'?>">Chat<br />counseling</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/formchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Chat<br />counseling</a> 
 							<?php elseif ($metodo['titulo']=='phone'): ?>
-							<a class="standardsButton wm" href="<?php echo BASE_URL.'/'.$psicologo_name.'/phone'?>">Phone<br />counseling</a> 
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/formphone.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Phone<br />counseling</a> 
 							<?php else: ?>
-							<a class="standardsButton wm" href="<?php echo BASE_URL.'/'.$psicologo_name.'/videoconference'?>">Video conference<br />counseling</a>
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/formvideoconference.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Video conference<br />counseling</a>
 						<?php endif; endforeach; ?>
 						</div>
 					</div>

@@ -1,4 +1,3 @@
-<?php require_once '../db_conn.php'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
@@ -93,7 +92,7 @@ Curso intesivo por Internet, 4 horas
 <br /> 
 Costo: 76 EUR / 80 USD / 1300 MXN (todo incluido) / alumno
 <br />
-Fechas: 26. - 27. de agosto, 2015
+Fechas: 26. - 27. de septiembre, 2015
 <br />
 Horario: 18.00 – 20.00 (España) / 11.00 – 13.00 (México) / 14.00 – 16.00 (Argentina)
 </p>

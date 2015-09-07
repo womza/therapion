@@ -1,7 +1,7 @@
 <?php
 function get_credentials()
 {
-	$configs=array('site_root'=>'http://therapion.local',
+	$configs=array('site_root'=>'https://www.therapion.local',
 				 'db_settings'=>array('host'=>'localhost',
 					   				  'db_name'=>'therapio_therapion',
 					   				  'username'=>'root',

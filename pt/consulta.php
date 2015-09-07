@@ -141,7 +141,7 @@
 						 
                                                        <div class="profile">
  
- 							<div class="photo lft">
+ 							<div class="photo rgt">
 								<img src="../assets/images/therapion-logo.jpg" height="150" width="100">							 
 								<a class="standardsButton " href="./ptformservicoaocliente.php">Contato</a>
 							</div>

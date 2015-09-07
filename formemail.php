@@ -2,9 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<?php include './common/head-tag.php'; 
-		require_once 'db_conn.php';
+		require_once 'db_conn.php';		
 		$psicologo=get_psicologo($_GET['id_psicologo']);
-		$psicologo_name = get_psicologo_name_url($psicologo);
 	?>
 	<title>E-mail counseling</title> 
 	<meta name="keywords" content="">

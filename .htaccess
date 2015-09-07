@@ -1,15 +1,1475 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-
-	IndexOptions +Charset=UTF-8
-	DirectoryIndex index.php index.html
-
-	RewriteBase /
-
-    ### English ###
-    RewriteRule ^([a-z-]+)$ bookwith.php?p=$1
-    RewriteRule ^([a-z-]+)/email$ formemail.php?p=$1
-    RewriteRule ^([a-z-]+)/chat$ formchat.php?p=$1
-    RewriteRule ^([a-z-]+)/videoconference$ formvideoconference.php?p=$1
-    RewriteRule ^([a-z-]+)/phone$ formphone.php?p=$1
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
 </IfModule>
+## EXPIRES CACHING ##
+
+Options +FollowSymLinks 
+RewriteCond %{THE_REQUEST} ^.*/index.php 
+RewriteRule ^(.*)index.php$ http://www.therapion.com/$1 [R=301,L]
+
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /404.shtml
+ErrorDocument 500 /500.shtml
+
+RewriteOptions inherit
+Options +FollowSymlinks
+RewriteEngine on
+rewritecond %{http_host} ^therapion.com [nc]
+rewriterule ^(.*)$ http://www.therapion.com/$1 [r=301,nc] 
+
+RewriteEngine on
+
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+#The next line modified by DenyIP
+order allow,deny
+#The next line modified by DenyIP
+#deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName www.therapion.com
+AuthUserFile /home/pt4286a/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/pt4286a/public_html/_vti_pvt/service.grp
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+RewriteCond %{HTTP_HOST} ^therapion.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.therapion.com$
+RewriteRule ^confirmation\.php$ "http\:\/\/www\.therapion\.com\/payments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^prix\.php$ "http\:\/\/www\.therapion\.com\/tarif\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ura$ "http\:\/\/www\.therapion\.com\/uravalmennus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^doubts$ "http\:\/\/www\.therapion\.com\/questions\-and\-doubts\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^jobs$ "http\:\/\/www\.therapion\.com\/jobs\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^jobb\.php$ "http\:\/\/www\.therapion\.com\/lediga\-jobb\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^stillinger\.php$ "http\:\/\/www\.therapion\.com\/ledige\-stillinger\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^manual$ "http\:\/\/www\.therapion\.com\/manual\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^randevu$ "http\:\/\/www\.therapion\.com\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^defaq\.php$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
+RewriteRule ^frfaq\.php$ "http\:\/\/www\.therapion\.com\/fr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^randevu\.ph$ "http\:\/\/www\.therapion\.com\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^appointments$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookings$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookings\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^book\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-payments\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-payments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-jobs\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-jobs\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-bookwithhisae\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-bookwithhisae\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-bookwithmasami\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-bookwithmasami\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-bookwithyasuhiko\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-bookwithyasuhiko\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^randevu\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fiyatlari\.php$ "http\:\/\/www\.therapion\.com\/tr\/fiyatlari\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^isilanlari\.php$ "http\:\/\/www\.therapion\.com\/tr\/isilanlari\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^trrandevunil\.php$ "http\:\/\/www\.therapion\.com\/tr\/trrandevunil\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^trrandevurecep\.php$ "http\:\/\/www\.therapion\.com\/tr\/trrandevurecep\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psychologische\-hulp\-een\-therapie\.php$ "http\:\/\/www\.therapion\.com\/nl\/internettherapie\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^afspraak\.php$ "http\:\/\/www\.therapion\.com\/nl\/afspraak\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bevestiging\-en\-betaling\.php$ "http\:\/\/www\.therapion\.com\/nl\/bevestiging\-en\-betaling\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^vacantures\.php$ "http\:\/\/www\.therapion\.com\/nl\/vacantures\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^konsultation\.php$ "http\:\/\/www\.therapion\.com\/dk\/konsultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ledige\-stillinger\.php$ "http\:\/\/www\.therapion\.com\/dk\/ledige\-stillinger\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dkkonsultationerkaren\.php$ "http\:\/\/www\.therapion\.com\/dk\/dkkonsultationerkaren\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^isolanaklari\.php$ "http\:\/\/www\.therapion\.com\/tr\/isilanlari\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^itconsulenzaviola\.php$ "http\:\/\/www\.therapion\.com\/it\/itconsulenzaviola\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^itconsulenzamaria\.php$ "http\:\/\/www\.therapion\.com\/it\/itconsulenzamaria\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bestillninger\.php$ "http\:\/\/www\.therapion\.com\/no\/bestillinger\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bestillinger\.php$ "http\:\/\/www\.therapion\.com\/no\/bestillinger\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^betalinger\.php$ "http\:\/\/www\.therapion\.com\/no\/betalinger\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ledige\-jobber\.php$ "http\:\/\/www\.therapion\.com\/no\/ledige\-jobber\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nokonsultasjonerole\.php$ "http\:\/\/www\.therapion\.com\/no\/nokonsultasjonerole\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nokonsultasjonerkaren\.php$ "http\:\/\/www\.therapion\.com\/no\/nokonsultasjonerkaren\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nokonsultasjonertrine\.php$ "http\:\/\/www\.therapion\.com\/no\/nokonsultasjonertrine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nokonsultasjonerlillian\.php$ "http\:\/\/www\.therapion\.com\/no\/nokonsultasjonerlillian\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tarif\.php$ "http\:\/\/www\.therapion\.com\/fr\/tarif\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^consultation\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^emploi\.php$ "http\:\/\/www\.therapion\.com\/fr\/emploi\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^paiement\.php$ "http\:\/\/www\.therapion\.com\/fr\/paiements\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/paiement\.php$ "http\:\/\/www\.therapion\.com\/fr\/paiements\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^programme\-de\-therapie\.php$ "http\:\/\/www\.therapion\.com\/fr\/programme\-de\-therapie\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^angebot\.php$ "http\:\/\/www\.therapion\.com\/de\/angebot\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^kosten\.php$ "http\:\/\/www\.therapion\.com\/de\/kosten\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^termine\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^stellenangebote\.php$ "http\:\/\/www\.therapion\.com\/de\/stellenangebote\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^therapieprogramm\.php$ "http\:\/\/www\.therapion\.com\/de\/therapieprogramm\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^karrierecoaching\.php$ "http\:\/\/www\.therapion\.com\/de\/karrierecoaching\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^anleitung\.php$ "http\:\/\/www\.therapion\.com\/de\/anleitung\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ptconsultaizaura\.php$ "http\:\/\/www\.therapion\.com\/pt\/ptconsultaizaura\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ptconsultasonia\.php$ "http\:\/\/www\.therapion\.com\/pt\/ptconsultasonia\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^izaura$ "http\:\/\/www\.therapion\.com\/pt\/ptconsultaizaura\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ptconsultaandreia\.php$ "http\:\/\/www\.therapion\.com\/pt\/ptconsultaandreia\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psykologservice\.php$ "http\:\/\/www\.therapion\.com\/se\/psykologservice\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bokning\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^priser\.php$ "http\:\/\/www\.therapion\.com\/se\/priser\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^lediga\-jobb\.php$ "http\:\/\/www\.therapion\.com\/se\/lediga\-jobb\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^\ betalningar\.php$ "http\:\/\/www\.therapion\.com\/se\/\ betalningar\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^betalningar\.php$ "http\:\/\/www\.therapion\.com\/se\/betalningar\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^betalning\.php$ "http\:\/\/www\.therapion\.com\/se\/betalningar\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^coaching\-pa\-natet\.php$ "http\:\/\/www\.therapion\.com\/se\/coaching\-pa\-natet\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^faq\-internetbehandling\.php$ "http\:\/\/www\.therapion\.com\/se\/faq\-internetbehandling\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^instruktioner\.php$ "http\:\/\/www\.therapion\.com\/se\/instruktioner\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^sekonsultationerbritt\.php$ "http\:\/\/www\.therapion\.com\/se\/sekonsultationerbritt\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^britt$ "http\:\/\/www\.therapion\.com\/se\/sekonsultationerbritt\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^sekonsultationeremilia\.php$ "http\:\/\/www\.therapion\.com\/se\/sekonsultationeremilia\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^sekonsultationerelda\.php$ "http\:\/\/www\.therapion\.com\/se\/sekonsultationerelda\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^sekonsultationerkarina\.php$ "http\:\/\/www\.therapion\.com\/se\/sekonsultationerkarina\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ptfaq\.php$ "http\:\/\/www\.therapion\.com\/pt\/ptfaq\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^mergers\.php$ "http\:\/\/www\.therapion\.com\/news\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jatko$ "http\:\/\/www\.therapion\.com\/fi\/fiformjatko\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^uravalmennus\.php$ "http\:\/\/www\.therapion\.com\/fi\/uravalmennus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fikonsultaatiohelena\.php$ "http\:\/\/www\.therapion\.com\/fi\/fikonsultaatiohelena\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fikonsultaatioanne\.php$ "http\:\/\/www\.therapion\.com\/fi\/fikonsultaatioanne\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fikonsultaatiopaivi\.php$ "http\:\/\/www\.therapion\.com\/fi\/fikonsultaatiopaivi\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^positiiviset\.pdf$ "http\:\/\/www\.therapion\.com\/fi\/positiiviset\.pdf" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^kauneusjaterveys\.php$ "http\:\/\/www\.therapion\.com\/fi\/kauneusjaterveys\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^konsultaatiot\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatiot\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/jatko$ "http\:\/\/www\.therapion\.com\/fi\/fiformjatko\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fiformjatko\.php$ "http\:\/\/www\.therapion\.com\/fi\/fiformjatko\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/precos\.php$ "http\:\/\/www\.therapion\.com\/pt\/custo\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^articles\-2011\.php$ "http\:\/\/www\.therapion\.com\/articles\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^articles\-2013\.php$ "http\:\/\/www\.therapion\.com\/articles\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^consultaoscar\.php$ "http\:\/\/www\.therapion\.com\/es\/consultaoscar\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^articles\-2012\.php$ "http\:\/\/www\.therapion\.com\/articles\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/article\-about\-bullying\.php$ "http\:\/\/www\.therapion\.com\/jp\/about\-bullying\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esfaq\.php$ "http\:\/\/www\.therapion\.com\/es\/es\-faq\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/tarif\.php$ "http\:\/\/www\.therapion\.com\/fr\/prix\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^key\-facts\.php$ "http\:\/\/www\.therapion\.com\/our\-services\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/konsultation\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/nettiterapia\.php$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/internetterapi\.php$ "http\:\/\/www\.therapion\.com\/se" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^china\-counseling\.php$ "http\:\/\/www\.therapion\.com\/cn" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^cn\/china\-counseling\.php$ "http\:\/\/www\.therapion\.com\/cn" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nettpsykolog\.php$ "http\:\/\/www\.therapion\.com\/no" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nettpsykolog\.php$ "http\:\/\/www\.therapion\.com\/no" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^netterapi\.php$ "http\:\/\/www\.therapion\.com\/dk" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/netterapi\.php$ "http\:\/\/www\.therapion\.com\/dk" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^online\-terapi\-psikoloji\.php$ "http\:\/\/www\.therapion\.com\/tr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tr\/online\-terapi\-psikoloji\.php$ "http\:\/\/www\.therapion\.com\/tr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-counseling\.php$ "http\:\/\/www\.therapion\.com\/jp" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-counseling\.php$ "http\:\/\/www\.therapion\.com\/jp" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psicologia\-e\-terapia\-online\.php$ "http\:\/\/www\.therapion\.com\/it" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/psicologia\-e\-terapia\-online\.php$ "http\:\/\/www\.therapion\.com\/it" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^internettherapie\.php$ "http\:\/\/www\.therapion\.com\/nl" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nl\/internettherapie\.php$ "http\:\/\/www\.therapion\.com\/nl" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psychologe\-online\.php$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/psychologe\-online\.php$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psy\-en\-ligne\-online\.php$ "http\:\/\/www\.therapion\.com\/fr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/psy\-en\-ligne\-online\.php$ "http\:\/\/www\.therapion\.com\/fr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psiholog\-online\.php$ "http\:\/\/www\.therapion\.com\/ru" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/psiholog\-online\.php$ "http\:\/\/www\.therapion\.com\/ru" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psicologo\-on\-line\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/psicologo\-on\-line\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^br$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultanadia\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^internetterapi$ "http\:\/\/www\.therapion\.com\/se" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psicologia\-e\-terapia\-online\.php\&force\=1$ "http\:\/\/www\.therapion\.com\/it" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^suomi$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-appointments\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^internetterapi\.php$ "http\:\/\/www\.therapion\.com\/se" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^svenska$ "http\:\/\/www\.therapion\.com\/se" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nettiterapia\.php$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/enlaprensa2\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/beneficios\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/servicio\-mundial\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^esconsultaclara\.php$ "http\:\/\/www\.therapion\.com\/es\/esconsultaclara\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithdeniz\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^esconsultanadia\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^articles\.php$ "http\:\/\/www\.therapion\.com\/blog" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^photos\.php$ "http\:\/\/www\.therapion\.com\/guidelines\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psychologische\-hulp\-en\-therapie\.php$ "http\:\/\/www\.therapion\.com\/nl" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/enlaprensa1\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^papers\.php$ "http\:\/\/www\.therapion\.com\/blog" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^discounts\.php$ "http\:\/\/www\.therapion\.com\/fees\.php" [R=301,L]
+
+deny from 96.47.224.42
+deny from 173.44.37.234
+deny from 96.47.225.162
+deny from 112.111.189.4
+deny from 173.44.37.226
+
+deny from 188.143.232.111
+deny from 173.44.37.250
+deny from 175.42.25.57
+deny from 220.250.5.218
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^Online\.php$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+deny from 199.15.233.170
+deny from 89.248.169.47
+deny from 175.44.31.102
+deny from 96.47.224.50
+deny from 213.238.175.29
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/bestillinger\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+deny from 195.211.154.137
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiolotta\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fikonsultaatiomarja\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^enlaprensa1\.php$ "http\:\/\/www\.therapion\.com\/es\/blog" [R=301,L]
+
+deny from 91.207.4.22
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^www\.therapion\.com\/pt\/ptconsultacristiane\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/kenen\-puoleen\.php$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fikonsultaatiosari\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithlydia\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultadanielle\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithdemetria\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+deny from 175.42.24.220
+deny from 199.15.233.176
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaaminta\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+deny from 80.82.64.205
+deny from 115.236.59.194
+deny from 220.250.4.30
+deny from 94.102.56.210
+deny from 199.15.233.184
+deny from 62.210.167.213
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithmaureen\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/fordelar\.php$ "http\:\/\/www\.therapion\.com\/se" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/vad\-ar\-kbt\.php$ "http\:\/\/www\.therapion\.com\/se" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithmariann\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultacristiane\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+deny from 175.44.58.178
+deny from 96.47.224.58
+
+deny from 91.207.5.198
+deny from 93.174.95.60
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultapamela\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultaandreia\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultaclaudia\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/importancia\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/coaching\-pa\-natet\.php$ "http\:\/\/www\.therapion\.com\/se\/jobbcoaching\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultgabriel\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaoscar\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+deny from 173.44.37.242
+deny from 36.250.191.158
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nobetalinger\.php$ "http\:\/\/www\.therapion\.com\/no\/betalinger\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nobetalingar\.php$ "http\:\/\/www\.therapion\.com\/no\/betalinger\.php" [R=301,L]
+
+deny from 220.250.5.36
+deny from 175.42.27.158
+deny from 195.211.155.153
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fiformkartoitus\.php$ "http\:\/\/www\.therapion\.com\/fi\/fiformasiakaspalvelu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^psicologo\-online\.php$ "http\:\/\/www\.therapion\.com\/es\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/psicologo\-online\.php$ "http\:\/\/www\.therapion\.com\/es\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/betalinger\.php$ "http\:\/\/www\.therapion\.com\/no\/betaling\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/brukerregler\.php$ "http\:\/\/www\.therapion\.com\/no\/priser\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/brugeraftale\.php$ "http\:\/\/www\.therapion\.com\/dk\/priser\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^priser\-og\-betaling\.php$ "http\:\/\/www\.therapion\.com\/dk\/betaling\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/priser\-og\-betaling\.php$ "http\:\/\/www\.therapion\.com\/dk\/betaling\.php" [R=301,L]
+
+deny from 195.211.155.154
+deny from 115.29.28.137
+deny from 220.200.56.84
+deny from 199.15.233.130
+deny from 175.42.30.143
+deny from 199.15.233.178
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nl\/kosten\-en\-betaling\.php$ "http\:\/\/www\.therapion\.com\/nl\/kosten\-en\-tarieven\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/instruktioner\.php$ "http\:\/\/www\.therapion\.com\/se\/psykologservice\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^japan\-online\.php$ "http\:\/\/www\.therapion\.com\/jp\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nobetalingar\.php$ "http\:\/\/www\.therapion\.com\/no\/betaling\.php" [R=301,L]
+
+deny from 211.97.109.222
+deny from 36.250.172.58
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^beratunghenrik\.php$ "http\:\/\/www\.therapion\.com\/de\/beratunghenrik\.php" [R=301,L]
+
+deny from 203.209.87.50
+deny from 36.248.168.61
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fikonsultaatiojukka\.php$ "http\:\/\/www\.therapion\.com\/fi\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationertove\.php$ "http\:\/\/www\.therapion\.com\/se\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiojukka\.php$ "http\:\/\/www\.therapion\.com\/fi\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nl\/bevestiging\-en\-betaling\.php$ "http\:\/\/www\.therapion\.com\/nl\/kosten\-en\-tarieven\.php" [R=301,L]
+
+deny from 126.15.238.28
+deny from 199.15.233.177
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatioanne\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+deny from 175.42.85.89
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pagamentos\.php$ "http\:\/\/www\.therapion\.com\/pt\/pagamentos\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^xmlrpc\.php$ "http\:\/\/www\.therapion\.com\/blog\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/plati\.php$ "http\:\/\/www\.therapion\.com\/ru\/oplata\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/beneficio\.php$ "http\:\/\/www\.therapion\.com\/pt\/" [R=301,L]
+
+deny from 146.0.74.205
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^terapiprogram\.php$ "http\:\/\/www\.therapion\.com\/se\/terapiprogram\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tr\/fiyatlari\.php$ "http\:\/\/www\.therapion\.com\/tr\/odeme\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^zahlungen\.php$ "http\:\/\/www\.therapion\.com\/de\/zahlungen\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tr\/trrandevudeniz\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^beratungdemi\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^beratungewald\.php$ "http\:\/\/www\.therapion\.com\/de\/beratungewald\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/selivekonsultationerkarina\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+deny from 195.2.240.101
+deny from 178.137.16.26
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^lavoro\.php$ "http\:\/\/www\.therapion\.com\/it\/lavoro\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/psicoterapia\-per\-aspiranti\-pazienti\.php$ "http\:\/\/www\.therapion\.com\/it\/per\-saperne\-di\-piu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/efficacia\-della\-terapia\-a\-distanza\.php$ "http\:\/\/www\.therapion\.com\/it\/per\-saperne\-di\-piu\.php" [R=301,L]
+
+deny from 199.15.233.186
+deny from 27.251.23.56
+deny from 42.121.105.155
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^paiements\.php$ "http\:\/\/www\.therapion\.com\/fr\/paiements\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiokaisa\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationeremilia\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+deny from 46.161.41.31
+deny from 193.201.224.184
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerfredrik\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^sekonsultationerhedda\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+deny from 93.174.90.18
+deny from 80.82.64.65
+deny from 62.210.79.109
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationergitte\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+deny from 175.44.9.86
+deny from 62.210.83.26
+deny from 62.210.180.16
+deny from 93.174.95.61
+deny from 46.161.41.199
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithelizabeth\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithjoaquin\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithdonald\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/anleitung\.php\ $ "http\:\/\/www\.therapion\.com\/de\/internettherapie\.php" [R=301,L]
+
+deny from 27.19.173.103
+
+RewriteEngine on
+
+## HTTPS FORMS ##
+
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} (form.*\.php) [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{REQUEST_METHOD} !=POST [NC]
+RewriteCond %{REQUEST_URI} !(form.*\.php|send.*\.php) [NC]
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiopaivi\.php$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithyuka\.php$ "http\:\/\/www\.therapion\.com\/fjp" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithmasami\.php$ "http\:\/\/www\.therapion\.com\/fjp" [R=301,L]
+
+deny from 195.211.154.42
+deny from 91.200.12.81
+deny from 217.152.237.80
+deny from 192.185.53.4
+deny from 88.198.180.41
+deny from 64.13.232.232
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^consulta\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithlaurav\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaruth\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fikonsultaatiotimo\.php$ "http\:\/\/www\.therapion\.com\/fi\/fikonsultaatiotimo\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/delivegesprachewald\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^online\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^on\-line\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/delivegesprachewald\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/internettherapie\.php$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^frconsultationmuriel\.php$ "http\:\/\/www\.therapion\.com\/fr\/frconsultationmuriel\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^unternehmen\.php$ "http\:\/\/www\.therapion\.com\/de\/stellenangebote\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^hinnasto\.php$ "http\:\/\/www\.therapion\.com\/fi\/hinnasto\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ptchamadanuno\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiokirsti\.php$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^konsunatalia\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsunatalia\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^onrain\.php$ "http\:\/\/www\.therapion\.com\/jp" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^programas\-de\-terapia\.php$ "http\:\/\/www\.therapion\.com\/es\/programas\-de\-terapia\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^expat\-counseling\.php$ "http\:\/\/www\.therapion\.com\/expat\-counseling\-coaching\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^delivegesprachhenrik\.php$ "http\:\/\/www\.therapion\.com\/de\/beratunghenrik\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaenvivocelia\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/selivesamtaleremilia\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaenvivoalicia\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nl\/vacantures\.php$ "http\:\/\/www\.therapion\.com\/nl\/vacatures\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^www\.therapion\.com\/filivepuhelutsari\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^www\.therapion\.com\/fi\/filivepalvelutjohanna\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^www\.therapion\.com\/esconsultaliliana\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^www\.therapion\.com\/pt\/ptchamadaizaura\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^www\.therapion\.com\/es\/reservaciones\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/delivegesprachdemi\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/konsunatalia\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/reservaciones\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^programas\-de\-terapia\-e\-auto\-ajuda\.php$ "http\:\/\/www\.therapion\.com\/pt\/programas\-de\-terapia\-e\-auto\-ajuda\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/blog\/tag\/padres\/$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptchamadaizaura\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^talktoana\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/empleo$ "http\:\/\/www\.therapion\.com\/es\/empleos\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/blog\/si\-me\-equivoco\-tan\-tonto\-soy\/$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/blog\/el\-fracaso\-es\-el\-unico\-camino\-hacia\-el\-exito\/\ $ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^faq\.php\ $ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/ruthcredential\.pdf\ $ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ptformchatsonia\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^\ blog\/psychological\-counselling\-in\-parkinsons\-disease\/$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^esconsultapablo\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/blog\/comments\/feed\/$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithcolinette\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^calleloisa\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptchamadamarcia\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^esconsultagissel\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^frconsultationappelmounia\.php$ "http\:\/\/www\.therapion\.com\/fr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungmaria\.phpMaria$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/therapy_programs$ "http\:\/\/www\.therapion\.com\/es\/programas\-de\-terapia\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/therapy_programs$ "http\:\/\/www\.therapion\.com\/pt\/programas\-de\-terapia\-e\-auto\-ajuda\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/therapy_programs$ "http\:\/\/www\.therapion\.com\/fi\/terapiaohjelmat\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/terapiaohjelmat\.php$ "http\:\/\/www\.therapion\.com\/fi\/terapiaohjelma\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatiohelena\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatioiida\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatiotimo\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatiopia\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatiominna\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatiojohanna\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/konsultaatiolasse\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^therapy_programs$ "http\:\/\/www\.therapion\.com\/therapy\-programs\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^cn\/bookwithcolinette\.php$ "http\:\/\/www\.therapion\.com\/cn\/china\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nl\/afspraakmetmike\.php$ "http\:\/\/www\.therapion\.com\/nl" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nl\/afspraakmetmuriel\.php$ "http\:\/\/www\.therapion\.com\/nl" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithlauras\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithsteve\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithnil\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithmike\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithnicole\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithmichael\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithlisa\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithsimon\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithsarah\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithtimo\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithjoanne\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithlynn\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaclara\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultacecilia\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultapaula\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaliliana\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultaalicia\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultafrank\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultahugo\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultapabloe\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultadaniela\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultacelia\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esconsultapablo\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esformchatclara\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esformvideoconferenciaclara\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esformchatcecilia\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/esformvideoconferenciacecilia\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultasonia\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultaizaura\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultacesar\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultapaulo\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptconsultaelena\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptformemailcesar\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptformchatcesar\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptformvideoconferenciacesar\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptformtelefonecesar\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiohelena\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatioiida\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiopia\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiominna\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiojohanna\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiolasse\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fiformnettipuhelutimo\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fiformnettipuheluhelena\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerdennie\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerbritt\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerannechristine\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerelda\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerjosefine\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerkarina\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationertom\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationersara\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerslavica\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationerbeatrice\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/sekonsultationertimo\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/seformvideosamtaldennie\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/seformvideosamtalbritt\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/seformtelefonbritt\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/seformtelefondennie\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nokonsultasjonerthomas\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nokonsultasjonerlillian\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nokonsultasjonerole\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nokonsultasjonertrine\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nokonsultasjonerdennie\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/nokonsultasjonerkaren\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationercathrine\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationerdennie\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationernete\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationersascha\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationerberit\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationerhenrik\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkkonsultationerkaren\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\/dkformchathenrik\.php$ "http\:\/\/www\.therapion\.com\/dk\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/blog$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/blog$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratunganja\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungjohannes\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungmaria\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungheide\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratunghenrik\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungewald\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungdemi\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungbirgit\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungkornelia\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/deformvideokonferenzmaria\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/deformvideokonferenzajna\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationisabellenail\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationmounia\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationmuriel\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationolivier\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationisabelle\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationmartine\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frformvideoconferenceisabellenail\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationsamuel\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/itconsulenzamaria\.php$ "http\:\/\/www\.therapion\.com\/it\/consulenze\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/itconsulenzafrancesco\.php$ "http\:\/\/www\.therapion\.com\/it\/consulenze\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/itconsulenzaclaudio\.php$ "http\:\/\/www\.therapion\.com\/it\/consulenze\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/itconsulenzacristina\.php$ "http\:\/\/www\.therapion\.com\/it\/consulenze\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/itconsulenzafulvio\.php$ "http\:\/\/www\.therapion\.com\/it\/consulenze\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^it\/itconsulenzaviola\.php$ "http\:\/\/www\.therapion\.com\/it\/consulenze\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/rukonsunataliya\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/rukonsuoksana\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/rukonsuigor\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/rukonsusvetlana\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tr\/trrandevuelif\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tr\/trrandevuozgur\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tr\/trrandevunil\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^tr\/trrandevurecep\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithhisano\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithmayumi\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithtakashi\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithhisae\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithsimon\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwithchinatsu\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^jp\/japan\-bookwityasuhiko\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/blog\/el\-fracaso\-es\-el\-unico\-camino\-hacia\-el\-exito\/$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/blog\/infidelidade\-da\-mulher\-vs\-homem\/$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^blog\/comments\/feed\/$ "http\:\/\/www\.therapion\.com\/blog\ " [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/blog\/casamento\-sem\-sexo\-quando\-o\-marido\-nao\-a\-procura\/$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/blog\/adolescentes\-y\-padres\-parte\-2\/$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/ptforrminscricao\.php$ "https\:\/\/www\.therapion\.com\/pt\/ptforminscricao\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ceni\.php$ "http\:\/\/www\.therapion\.com\/ru\/ceni\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^blog\/psychological\-counselling\-in\-parkinsons\-disease\/$ "http\:\/\/www\.therapion\.com\/blog\ " [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^kompanija\.php$ "http\:\/\/www\.therapion\.com\/ru\/rabota\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^pt\/blog\/duvida\-e\-medo\-como\-lidar\-com\-eles\/$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/kurssi\/comments\/feed\/$ "http\:\/\/www\.therapion\.com\/fi\/kurssi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/precios\.php$ "http\:\/\/www\.therapion\.com\/es\/costo\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^es\/articulos\/adolescentes\-y\-padres\-hay\-entendimiento\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^Etiske_prinsipper_for_nordiske_psykologer\.pdf$ "http\:\/\/www\.therapion\.com\/no\/Etiske_prinsipper_for_nordiske_psykologer\.pdf" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ru\/ruliveuslugisvetlana\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^selivekonsultationerkarina\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratung$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/deliveberatunghenrik\.php$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationappelmuriel\.php$ "http\:\/\/www\.therapion\.com\/fr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/beratungkornelia\.phpKornelia$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fi\/fikonsultaatiotimo\.php$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/prix\.php$ "http\:\/\/www\.therapion\.com\/fr\/tarifs\.php" [R=301,L]
+
+deny from 176.97.116.146
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^bookwithadis\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/deliveberatungbirgit\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\/delivegesprachheide\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dk\%20$ "http\:\/\/www\.therapion\.com\/dk" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^www\.therapion\.comjapan\-bookwithyasuhiko\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^coaching\-para\-expatriados\.php$ "http\:\/\/www\.therapion\.com\/expat\-counseling\-coaching\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^de\%22$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^empleos\.php$ "http\:\/\/www\.therapion\.com\/es\/empleos\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^submit\.php$ "https\:\/\/www\.therapion\.com\/formcustomerservice\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^consultaeloisa\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^fr\/frconsultationnathalie\.php$ "http\:\/\/www\.therapion\.com\/fr" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^no\/noformchatdennie\.php$ "http\:\/\/www\.therapion\.com\/no\/booking\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^esconsultaliliana\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^frconsultationisabellenail\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nettiterapia\.php\/konsultaatiotimo\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^se\/selivesamtalerdennie\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ptchamadapamela\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ruliveusluginataliya\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^filivepuhelutsari\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
+
+RewriteBase /
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+
+### English ###
+#RewriteRule ^([a-z-]+)$ bookwith.php?p=$1 [L,QSA]
+#RewriteRule ^([a-z-]+)/email$ formemail.php?p=$1
+#RewriteRule ^([a-z-]+)/chat$ formchat.php?p=$1
+#RewriteRule ^([a-z-]+)/videoconference$ formvideoconference.php?p=$1
+#RewriteRule ^([a-z-]+)/phone$ formphone.php?p=$1

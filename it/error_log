@@ -18,3 +18,4 @@
 [12-Jan-2015 18:50:06 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/php54/lib/php/extensions/no-debug-non-zts-20100525/imagick.so' - /opt/php54/lib/php/extensions/no-debug-non-zts-20100525/imagick.so: file too short in Unknown on line 0
 [12-Jan-2015 18:50:06 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/php54/lib/php/extensions/no-debug-non-zts-20100525/ixed.5.4.lin' - /opt/php54/lib/php/extensions/no-debug-non-zts-20100525/ixed.5.4.lin: file too short in Unknown on line 0
 [23-Jul-2015 18:26:53 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home3/therapio/public_html/it/consulenze_new.php on line 59
+[03-Sep-2015 07:12:54 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home3/therapio/public_html/db_conn.php on line 33
