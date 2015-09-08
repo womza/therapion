@@ -22,7 +22,7 @@
 					<div class="info">
 						 
 					 	<div class="photo rgt">
-							<img src="./assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">
+							<img src="<?php echo get_credentials()['site_root']?>/assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">
 						</div>
 						
 						<h1>

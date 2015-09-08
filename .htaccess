@@ -914,8 +914,8 @@ RewriteRule ^pt\/ptchamadaizaura\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=30
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^talktoana\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^es\/empleo$ "http\:\/\/www\.therapion\.com\/es\/empleos\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^es\/empleo$ "http\:\/\/www\.therapion\.com\/es\/empleos\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^es\/blog\/si\-me\-equivoco\-tan\-tonto\-soy\/$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
@@ -1437,8 +1437,8 @@ RewriteRule ^coaching\-para\-expatriados\.php$ "http\:\/\/www\.therapion\.com\/e
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^de\%22$ "http\:\/\/www\.therapion\.com\/de" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^empleos\.php$ "http\:\/\/www\.therapion\.com\/es\/empleos\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^empleos\.php$ "http\:\/\/www\.therapion\.com\/es\/empleos\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^submit\.php$ "https\:\/\/www\.therapion\.com\/formcustomerservice\.php" [R=301,L]

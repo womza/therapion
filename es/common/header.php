@@ -14,7 +14,7 @@
 				
 				<div id="icon-menu"></div>	
 					<div id="logo">
-							<a href="./" title="Bienvenido a Therapion Consulting. Therapion.com - Atención psicológica por Internet.">
+							<a href="http://www.therapion.com/es/" title="Bienvenido a Therapion Consulting. Therapion.com - Atención psicológica por Internet.">
 								Therapion
 								<span></span>
 							</a>
@@ -29,11 +29,11 @@
 		<div class="inner">			
 			<div id="main-nav" >
 				<ul>
-					<li><a href="./">Inicio</a></li>
-					<li><a href="./consultas.php">Reservar Consulta</a></li>
-					<li><a href="./costo.php">Precios</a></li>
-					<li><a href="./servicios.php">Servicios</a></li>
-					<li><a href="./empleos.php">Empleos</a></li>
+					<li><a href="http://www.therapion.com/es/">Inicio</a></li>
+					<li><a href="http://www.therapion.com/es/consultas.php">Reservar Consulta</a></li>
+					<li><a href="http://www.therapion.com/es/costo.php">Precios</a></li>
+					<li><a href="http://www.therapion.com/es/servicios.php">Servicios</a></li>
+					<li><a href="http://www.therapion.com/es/empleos.php">Empleos</a></li>
 					<li class="last"><a href="#">Idioma</a>
 						<div>
 						<ul>

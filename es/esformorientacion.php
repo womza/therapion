@@ -32,7 +32,7 @@
 <p>
 <b>
 NOTA: Para las preguntas psicológicas se requiere una consulta: 
-<a class="link small" href="./consultas.php">Pedir cita <img src="../assets/images/internal-link.png" /></a> 
+<a class="link small" href="http://www.therapion.com/es/consultas.php">Pedir cita <img src="../assets/images/internal-link.png" /></a> 
 </b>
 </p>
 				

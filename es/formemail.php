@@ -38,7 +38,7 @@
 						</p>
 
                                                 <p>
-						<a  class="link" href="./instruccionescorreo.php">Instrucciones: Como usar el servicio <img src="../assets/images/internal-link.png" /> </a>
+						<a  class="link" href="http://www.therapion.com/es/instruccionescorreo.php">Instrucciones: Como usar el servicio <img src="../assets/images/internal-link.png" /> </a>
 						</p>
 						
                                                 <br />						

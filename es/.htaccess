@@ -12,4 +12,8 @@
     RewriteRule ^([a-z-]+)/chat$ /es/formchat.php?p=$1 [L]
     RewriteRule ^([a-z-]+)/videoconferencia$ /es/formvideoconference.php?p=$1 [L]
     RewriteRule ^([a-z-]+)/telefono$ /es/formphone.php?p=$1 [L]
+
+    ## HTTPS FORMS ##
+    RewriteCond %{HTTPS} off
+    RewriteRule ^esformorientacion.php$ es/esformorientacion.php
 </IfModule>

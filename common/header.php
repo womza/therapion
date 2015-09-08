@@ -14,7 +14,7 @@
 				
 				<div id="icon-menu"></div>	
 					<div id="logo">
-							<a href="./" title="Welcome to Therapion.com! We provide online therapy and other mental health services over the Internet.">
+							<a href="/" title="Welcome to Therapion.com! We provide online therapy and other mental health services over the Internet.">
 								Therapion
 								<span></span>
 							</a>

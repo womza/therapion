@@ -11,7 +11,7 @@
 						<div id="foot-nav">
 							<ul>
 								<li><a href="../sitemap.xml" target="_blank">Sitemap(XML)</a></li>
-								<li class="last"><a href="./formcustomerservice.php" target="_blank">Contacts</a></li>						
+								<li class="last"><a href="/formcustomerservice.php" target="_blank">Contacts</a></li>						
 							</ul>
 						</div>						
 					</div>
