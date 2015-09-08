@@ -1,3 +1,4 @@
+<?php require_once 'db_conn.php'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -211,7 +212,11 @@ This is particularly useful when high levels of shame or embarrassment make it h
 						<div class="profile">
 							<div class="photo lft">
 								<img src="./assets/images/profiles/mike.jpg" height="150" width="100">
-								<a class="standardsButton " href="./bookwith.php?id_psicologo=10">Book with me</a>
+								<?php
+								$psicologo = get_psicologo(10);
+								$psicologo_name = get_psicologo_name_url($psicologo);
+								?>
+								<a class="standardsButton " href="./<?php echo $psicologo_name ?>">Book with me</a>
 							</div>	
 
 							<p>
