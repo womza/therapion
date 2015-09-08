@@ -57,5 +57,3 @@ function get_equipo($id_equipo)
 
 
 include $_SERVER['DOCUMENT_ROOT'] . '/function.php';
-/* Define BASE_URL */
-define('BASE_URL', get_credentials()['site_root']);

@@ -29,7 +29,9 @@ RewriteEngine on
 rewritecond %{http_host} ^therapion.com [nc]
 rewriterule ^(.*)$ http://www.therapion.com/$1 [r=301,nc] 
 
-RewriteEngine on
+#RewriteEngine on
+
+RewriteBase /
 
 # -FrontPage-
 
@@ -772,13 +774,21 @@ RewriteRule ^de\/anleitung\.php\ $ "http\:\/\/www\.therapion\.com\/de\/internett
 
 deny from 27.19.173.103
 
-RewriteEngine on
+#RewriteEngine on
 
 ## HTTPS FORMS ##
 
 RewriteCond %{HTTPS} off
 RewriteCond %{REQUEST_URI} (form.*\.php) [NC]
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+### English ###
+RewriteRule ^([a-z-]+)$ bookwith.php?p=$1
+RewriteRule ^([a-z-]+)/email$ formemail.php?p=$1 [L]
+RewriteRule ^([a-z-]+)/chat$ formchat.php?p=$1 [L]
+RewriteRule ^([a-z-]+)/videoconference$ formvideoconference.php?p=$1 [L]
+RewriteRule ^([a-z-]+)/phone$ formphone.php?p=$1 [L]
+
 
 RewriteCond %{HTTPS} on
 RewriteCond %{REQUEST_METHOD} !=POST [NC]
@@ -1462,14 +1472,3 @@ RewriteRule ^ruliveusluginataliya\.php$ "http\:\/\/www\.therapion\.com\/ru\/kons
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^filivepuhelutsari\.php$ "http\:\/\/www\.therapion\.com\/fi\/ajanvaraus\.php" [R=301,L]
-
-RewriteBase /
-#RewriteCond %{HTTPS} off
-#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
-
-### English ###
-#RewriteRule ^([a-z-]+)$ bookwith.php?p=$1 [L,QSA]
-#RewriteRule ^([a-z-]+)/email$ formemail.php?p=$1
-#RewriteRule ^([a-z-]+)/chat$ formchat.php?p=$1
-#RewriteRule ^([a-z-]+)/videoconference$ formvideoconference.php?p=$1
-#RewriteRule ^([a-z-]+)/phone$ formphone.php?p=$1

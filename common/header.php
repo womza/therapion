@@ -29,11 +29,11 @@
 		<div class="inner">			
 			<div id="main-nav" >
 				<ul>
-					<li><a href="./">Home</a></li>
-					<li><a href="./appointments.php">Book a Session</a></li>
-					<li><a href="./fees.php">Fees and Costs</a></li>
-					<li><a href="./our-services.php">Our Services</a></li>
-					<li><a href="./jobs.php">Jobs</a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/appointments.php">Book a Session</a></li>
+					<li><a href="/fees.php">Fees and Costs</a></li>
+					<li><a href="/our-services.php">Our Services</a></li>
+					<li><a href="/jobs.php">Jobs</a></li>
 					<li class="last"><a href="#">Language</a>
 					 <div>
 						<ul>

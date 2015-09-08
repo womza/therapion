@@ -8,8 +8,8 @@
 
     ### Spanish ###
     RewriteRule ^([a-z-]+)$ /es/bookwith.php?p=$1
-    RewriteRule ^([a-z-]+)/correo$ /es/formemail.php?p=$1
-    RewriteRule ^([a-z-]+)/chat$ /es/formchat.php?p=$1
-    RewriteRule ^([a-z-]+)/videoconferencia$ /es/formvideoconference.php?p=$1
-    RewriteRule ^([a-z-]+)/telefono$ /es/formphone.php?p=$1
+    RewriteRule ^([a-z-]+)/correo$ /es/formemail.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/chat$ /es/formchat.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/videoconferencia$ /es/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/telefono$ /es/formphone.php?p=$1 [L]
 </IfModule>
