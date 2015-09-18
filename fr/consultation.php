@@ -47,16 +47,17 @@
 						//exit(print_r($psicologos->fetch_array(MYSQLI_ASSOC)));
 						//echo print_r($psicologos);
 						while($psicologo=$psicologos->fetch_array(MYSQLI_ASSOC)):
+							$psicologo_name = get_psicologo_name_url($psicologo);
 						 ?>
 						
 						<div class="profile">
  
  							<div class="photo <?php echo ($i==0)?'lft':'rgt' ?>">
 								<img src="../assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">							 
-								<a class="standardsButton " href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Consultez avec moi</a>
+								<a class="standardsButton " href="./<?php echo $psicologo_name ?>">Consultez avec moi</a>
 							</div>
 							
-							<h4><a href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
+							<h4><a href="./<?php echo $psicologo_name ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
 							
 							<p><b>  
 							<?php echo $psicologo['titulo'] ?>
@@ -93,16 +94,17 @@
 						$i=0;
 						//echo print_r($psicologos);
 						foreach($psicologos as $psicologo):
+							$psicologo_name = get_psicologo_name_url($psicologo);
 						 ?>
 						
 						<div class="profile">
  
  							<div class="photo <?php echo ($i==0)?'lft':'rgt' ?>">
 								<img src="../assets/images/profiles/<?php echo $psicologo['foto'] ?>" height="150" width="100">							 
-								<a class="standardsButton " href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Consultez avec moi</a>
+								<a class="standardsButton " href="./<?php echo $psicologo_name ?>">Consultez avec moi</a>
 							</div>
 							
-							<h4><a href="./bookwith.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
+							<h4><a href="./<?php echo $psicologo_name ?>"><?php echo $psicologo['nombres_apellidos'] ?></a></h4>
 							
 							<p><b>  
 							<?php echo $psicologo['titulo'] ?>

@@ -201,8 +201,8 @@ RewriteRule ^nokonsultasjonerlillian\.php$ "http\:\/\/www\.therapion\.com\/no\/n
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^tarif\.php$ "http\:\/\/www\.therapion\.com\/fr\/tarif\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^consultation\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^consultation\.php$ "http\:\/\/www\.therapion\.com\/fr\/consultation\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^emploi\.php$ "http\:\/\/www\.therapion\.com\/fr\/emploi\.php" [R=301,L]
