@@ -450,8 +450,8 @@ RewriteRule ^psicologia\-e\-terapia\-online\.php\&force\=1$ "http\:\/\/www\.ther
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^suomi$ "http\:\/\/www\.therapion\.com\/fi" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^japan\-appointments\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^japan\-appointments\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-appointments\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^internetterapi\.php$ "http\:\/\/www\.therapion\.com\/se" [R=301,L]

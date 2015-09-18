@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	DirectoryIndex index.php index.html
+
+	RewriteBase /jp
+
+    ### Japan ###
+    RewriteRule ^([a-z-]+)$ /jp/bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/email$ /jp/formemail.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/chat$ /jp/formchat.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/videoconference$ /jp/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/phone$ /jp/formphone.php?p=$1 [L]
+
+    ## HTTPS FORMS ##
+    RewriteCond %{HTTPS} off
+    RewriteRule ^trformcustomerservice.php$ jp/trformcustomerservice.php
+</IfModule>
