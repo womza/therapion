@@ -2,6 +2,7 @@
 require_once '../db_conn.php';
 $psicologo=get_psicologo($_GET['id_psicologo']);
 $metodos=get_psicologo_metodos($_GET['id_psicologo']); 
+$psicologo_name = get_psicologo_name_url($psicologo);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -42,13 +43,13 @@ $metodos=get_psicologo_metodos($_GET['id_psicologo']);
 						<div class="wrap-buttons">	
 							<?php foreach($metodos as $metodo): 
 							if($metodo['titulo']=='email'):?>											
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/it/formemail.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Consulenza per <br />Email</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/it/<?php echo $psicologo_name ?>/email">Consulenza per <br />Email</a> 
 							<?php elseif ($metodo['titulo']=='chat'): ?>
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/it/formchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Consulenza via <br />Chat</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/it/<?php echo $psicologo_name ?>/chat">Consulenza via <br />Chat</a> 
 							<?php elseif ($metodo['titulo']=='phone'): ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/it/formphone.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Consulenza via <br />Telefono</a> 
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/it/<?php echo $psicologo_name ?>/telefono">Consulenza via <br />Telefono</a> 
 							<?php else: ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/it/formvideoconference.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Consulenza via <br />Videoconferenza</a>
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/it/<?php echo $psicologo_name ?>/videoconferenza">Consulenza via <br />Videoconferenza</a>
 						<?php endif; endforeach; ?>
 						</div>
 					</div>
