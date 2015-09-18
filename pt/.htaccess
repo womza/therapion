@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	DirectoryIndex index.php index.html
+
+	RewriteBase /pt
+
+    ### Spanish ###
+    RewriteRule ^([a-z-]+)$ /pt/bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/email$ /pt/formemail.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/chat$ /pt/formchat.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/videoconferencia$ /pt/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/telefone$ /pt/formphone.php?p=$1 [L]
+
+    ## HTTPS FORMS ##
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ptformservicoaocliente.php$ pt/ptformservicoaocliente.php
+</IfModule>

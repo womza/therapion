@@ -809,8 +809,8 @@ deny from 217.152.237.80
 deny from 192.185.53.4
 deny from 88.198.180.41
 deny from 64.13.232.232
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^consulta\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^consulta\.php$ "http\:\/\/www\.therapion\.com\/pt\/consulta\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^bookwithlaurav\.php$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
