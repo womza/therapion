@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	DirectoryIndex index.php index.html
+
+	RewriteBase /no
+
+    ### Norsk ###
+    RewriteRule ^([a-z-]+)$ /no/bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/epost$ /no/formemail.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/chat$ /no/formchat.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/videosamtale$ /no/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/telefon$ /no/formphone.php?p=$1 [L]
+
+    ## HTTPS FORMS ##
+    RewriteCond %{HTTPS} off
+    RewriteRule ^noformkundeservice.php$ no/noformkundeservice.php
+</IfModule>

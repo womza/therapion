@@ -14,7 +14,7 @@
 				
 				<div id="icon-menu"></div>	
 					<div id="logo">
-							<a href="./" title="Velkommen til Therapion Consulting. Therapion.com - psykologhjelp og netterapi.">
+							<a href="http://www.therapion.local/no/" title="Velkommen til Therapion Consulting. Therapion.com - psykologhjelp og netterapi.">
 								Therapion
 								<span></span>
 							</a>
@@ -29,10 +29,10 @@
 		<div class="inner">			
 			<div id="main-nav" >
 				<ul>
-					<li><a href="./">Hjem</a></li>
-					<li><a href="./booking.php">Book konsultasjon</a></li>
-					<li><a href="./priser.php">Priser</a></li>
-					<li><a href="./ledige-jobber.php">Ledige jobber</a></li>
+					<li><a href="http://www.therapion.local/no/">Hjem</a></li>
+					<li><a href="http://www.therapion.local/no/booking.php">Book konsultasjon</a></li>
+					<li><a href="http://www.therapion.local/no/priser.php">Priser</a></li>
+					<li><a href="http://www.therapion.local/no/ledige-jobber.php">Ledige jobber</a></li>
 					<li class="last"><a href="#">Velg språk</a>
 						<div>
 						<ul>

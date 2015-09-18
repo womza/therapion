@@ -23,7 +23,7 @@ function str_clean($String) {
     $String = str_replace(array('í','ì','î','ï'),"i",$String);
     $String = str_replace(array('é','è','ê','ë'),"e",$String);
     $String = str_replace(array('É','È','Ê','Ë'),"E",$String);
-    $String = str_replace(array('ó','ò','ô','õ','ö','º'),"o",$String);
+    $String = str_replace(array('ó','ò','ô','õ','ö','º','ø'),"o",$String);
     $String = str_replace(array('Ó','Ò','Ô','Õ','Ö'),"O",$String);
     $String = str_replace(array('ú','ù','û','ü'),"u",$String);
     $String = str_replace(array('Ú','Ù','Û','Ü'),"U",$String);

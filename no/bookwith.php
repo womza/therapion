@@ -2,6 +2,7 @@
 require_once '../db_conn.php';
 $psicologo=get_psicologo($_GET['id_psicologo']);
 $metodos=get_psicologo_metodos($_GET['id_psicologo']); 
+$psicologo_name = get_psicologo_name_url($psicologo);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="no" lang="no">
@@ -41,13 +42,13 @@ $metodos=get_psicologo_metodos($_GET['id_psicologo']);
 						<div class="wrap-buttons">	
 							<?php foreach($metodos as $metodo): 
 							if($metodo['titulo']=='email'):?>											
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/no/formemail.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">E-post</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/no/<?php echo $psicologo_name ?>/epost">E-post</a> 
 							<?php elseif ($metodo['titulo']=='chat'): ?>
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/no/formchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Chat</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/no/<?php echo $psicologo_name ?>/chat">Chat</a> 
 							<?php elseif ($metodo['titulo']=='phone'): ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/no/formphone.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Telefonsamtale</a> 
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/no/<?php echo $psicologo_name ?>/videosamtale">Telefonsamtale</a> 
 							<?php else: ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/no/formvideoconference.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Videosamtale</a>
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/no/<?php echo $psicologo_name ?>/telefon">Videosamtale</a>
 						<?php endif; endforeach; ?>
 						</div>
 					</div>
