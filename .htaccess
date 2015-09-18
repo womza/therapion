@@ -147,8 +147,8 @@ RewriteRule ^trrandevurecep\.php$ "http\:\/\/www\.therapion\.com\/tr\/trrandevur
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^psychologische\-hulp\-een\-therapie\.php$ "http\:\/\/www\.therapion\.com\/nl\/internettherapie\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^afspraak\.php$ "http\:\/\/www\.therapion\.com\/nl\/afspraak\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^afspraak\.php$ "http\:\/\/www\.therapion\.com\/nl\/afspraak\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^bevestiging\-en\-betaling\.php$ "http\:\/\/www\.therapion\.com\/nl\/bevestiging\-en\-betaling\.php" [R=301,L]

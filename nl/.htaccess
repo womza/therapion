@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	DirectoryIndex index.php index.html
+
+	RewriteBase /nl
+
+    ### Nederlands ###
+    RewriteRule ^([a-z-]+)$ /nl/bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/email$ /nl/formemail.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/chat$ /nl/formchat.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/videoconferentie$ /nl/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/telefoon$ /nl/formphone.php?p=$1 [L]
+
+    ## HTTPS FORMS ##
+    RewriteCond %{HTTPS} off
+    RewriteRule ^nlformklantenservice.php$ nl/nlformklantenservice.php
+</IfModule>
