@@ -9,8 +9,8 @@
     RewriteRule ^([a-z-]+)$ /fr/bookwith.php?p=$1
     RewriteRule ^([a-z-]+)/email$ /fr/formemail.php?p=$1 [L]
     RewriteRule ^([a-z-]+)/chat$ /fr/formchat.php?p=$1 [L]
-    RewriteRule ^([a-z-]+)/videoconferentie$ /fr/formvideoconference.php?p=$1 [L]
-    RewriteRule ^([a-z-]+)/telefoon$ /fr/formphone.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/videoconference$ /fr/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/telephone$ /fr/formphone.php?p=$1 [L]
 
     ## HTTPS FORMS ##
     RewriteCond %{HTTPS} off
