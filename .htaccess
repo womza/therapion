@@ -252,8 +252,8 @@ RewriteRule ^ptconsultaandreia\.php$ "http\:\/\/www\.therapion\.com\/pt\/ptconsu
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^psykologservice\.php$ "http\:\/\/www\.therapion\.com\/se\/psykologservice\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^bokning\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^bokning\.php$ "http\:\/\/www\.therapion\.com\/se\/bokning\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^priser\.php$ "http\:\/\/www\.therapion\.com\/se\/priser\.php" [R=301,L]
