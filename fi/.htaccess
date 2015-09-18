@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	DirectoryIndex index.php index.html
+
+	RewriteBase /fi
+
+    ### Soumi ###
+    RewriteRule ^([a-z-]+)$ /fi/bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/meili$ /fi/formemail.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/chatti$ /fi/formchat.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/nettipuhelu$ /fi/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/puhelin$ /fi/formphone.php?p=$1 [L]
+
+    ## HTTPS FORMS ##
+    RewriteCond %{HTTPS} off
+    RewriteRule ^fiformasiakaspalvelu.php$ fi/fiformasiakaspalvelu.php
+</IfModule>

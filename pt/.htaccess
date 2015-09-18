@@ -5,7 +5,7 @@
 
 	RewriteBase /pt
 
-    ### Spanish ###
+    ### Portugues ###
     RewriteRule ^([a-z-]+)$ /pt/bookwith.php?p=$1
     RewriteRule ^([a-z-]+)/email$ /pt/formemail.php?p=$1 [L]
     RewriteRule ^([a-z-]+)/chat$ /pt/formchat.php?p=$1 [L]

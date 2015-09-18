@@ -2,6 +2,7 @@
 require_once '../db_conn.php';
 $psicologo=get_psicologo($_GET['id_psicologo']);
 $metodos=get_psicologo_metodos($_GET['id_psicologo']); 
+$psicologo_name = get_psicologo_name_url($psicologo);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
@@ -43,13 +44,13 @@ $metodos=get_psicologo_metodos($_GET['id_psicologo']);
 						<div class="wrap-buttons">	
 							<?php foreach($metodos as $metodo): 
 							if($metodo['titulo']=='email'):?>											
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/fi/formemail.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Sähköposti</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/fi/<?php echo $psicologo_name ?>/meili">Sähköposti</a> 
 							<?php elseif ($metodo['titulo']=='chat'): ?>
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/fi/formchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Chatti</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/fi/<?php echo $psicologo_name ?>/chatti">Chatti</a> 
 							<?php elseif ($metodo['titulo']=='phone'): ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/fi/formvideoconference.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Nettipuhelu</a> 
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/fi/<?php echo $psicologo_name ?>/nettipuhelu">Nettipuhelu</a> 
 							<?php else: ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/fi/formphone.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Puhelinkeskustelu</a>
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/fi/<?php echo $psicologo_name ?>/puhelin">Puhelinkeskustelu</a>
 						<?php endif; endforeach; ?>
 						</div>
 					</div>

@@ -17,7 +17,7 @@ function get_psicologo_id_by_name($name,$charset='utf-8') {
 }
 
 function str_clean($String) {
-    $String = str_replace(array('á','à','â','ã','ª','ä'),"a",$String);
+    $String = str_replace(array('á','à','â','ã','ª','ä','å'),"a",$String);
     $String = str_replace(array('Á','À','Â','Ã','Ä'),"A",$String);
     $String = str_replace(array('Í','Ì','Î','Ï'),"I",$String);
     $String = str_replace(array('í','ì','î','ï'),"i",$String);
