@@ -222,8 +222,8 @@ RewriteRule ^angebot\.php$ "http\:\/\/www\.therapion\.com\/de\/angebot\.php" [R=
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^kosten\.php$ "http\:\/\/www\.therapion\.com\/de\/kosten\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^termine\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^termine\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^stellenangebote\.php$ "http\:\/\/www\.therapion\.com\/de\/stellenangebote\.php" [R=301,L]
