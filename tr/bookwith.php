@@ -2,6 +2,7 @@
 require_once '../db_conn.php';
 $psicologo=get_psicologo($_GET['id_psicologo'],'latin5');
 $metodos=get_psicologo_metodos($_GET['id_psicologo']); 
+$psicologo_name = get_psicologo_name_url($psicologo);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html >
@@ -42,13 +43,13 @@ $metodos=get_psicologo_metodos($_GET['id_psicologo']);
 						<div class="wrap-buttons">	
 							<?php foreach($metodos as $metodo): 
 							if($metodo['titulo']=='email'):?>											
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/tr/formemail.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">E-posta <br />danýþmanlýk</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/tr/<?php echo $psicologo_name ?>/email">E-posta <br />danýþmanlýk</a> 
 							<?php elseif ($metodo['titulo']=='chat'): ?>
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/tr/formchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Yazýlý <br />danýþmanlýk</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/tr/<?php echo $psicologo_name ?>/chat">Yazýlý <br />danýþmanlýk</a> 
 							<?php elseif ($metodo['titulo']=='phone'): ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/tr/formphone.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Telefonla <br />danýþmanlýk</a> 
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/tr/<?php echo $psicologo_name ?>/phone">Telefonla <br />danýþmanlýk</a> 
 							<?php else: ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/tr/formvideoconference.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Görüntülü <br/>danýþmanlýk</a>
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/tr/<?php echo $psicologo_name ?>/videoconference">Görüntülü <br/>danýþmanlýk</a>
 						<?php endif; endforeach; ?>
 						</div>
 					</div>

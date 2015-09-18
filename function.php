@@ -34,6 +34,7 @@ function str_clean($String) {
     $String = str_replace(array('[','^','´','`','¨','~',']','.'),"",$String);
     $String = str_replace("ç","c",$String);
     $String = str_replace("Ç","C",$String);
+    $String = str_replace(array("ş","þ"),"s",$String);
     $String = str_replace("ñ","n",$String);
     $String = str_replace("Ñ","N",$String);
     $String = str_replace("Ý","Y",$String);

@@ -99,8 +99,8 @@ RewriteCond %{HTTP_HOST} ^therapion\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.therapion\.com$
 RewriteRule ^frfaq\.php$ "http\:\/\/www\.therapion\.com\/fr" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^randevu\.ph$ "http\:\/\/www\.therapion\.com\/randevu\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^randevu\.ph$ "http\:\/\/www\.therapion\.com\/randevu\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^appointments$ "http\:\/\/www\.therapion\.com\/appointments\.php" [R=301,L]
@@ -129,8 +129,8 @@ RewriteRule ^japan\-bookwithmasami\.php$ "http\:\/\/www\.therapion\.com\/jp\/jap
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^japan\-bookwithyasuhiko\.php$ "http\:\/\/www\.therapion\.com\/jp\/japan\-bookwithyasuhiko\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^randevu\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^randevu\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^fiyatlari\.php$ "http\:\/\/www\.therapion\.com\/tr\/fiyatlari\.php" [R=301,L]
