@@ -2,6 +2,7 @@
 require_once '../db_conn.php';
 $psicologo=get_psicologo($_GET['id_psicologo'],'utf8');
 $metodos=get_psicologo_metodos($_GET['id_psicologo']); 
+$psicologo_name = get_psicologo_name_url($psicologo, true, true);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
@@ -40,13 +41,13 @@ $metodos=get_psicologo_metodos($_GET['id_psicologo']);
 						<div class="wrap-buttons">	
 							<?php foreach($metodos as $metodo): 
 							if($metodo['titulo']=='email'):?>											
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/ru/formemail.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Консультация по <br />электронной почте</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/ru/<?php echo $psicologo_name ?>/email">Консультация по <br />электронной почте</a> 
 							<?php elseif ($metodo['titulo']=='chat'): ?>
-							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/ru/formchat.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Консультация в <br />чате</a> 
+							<a class="standardsButton" href="<?php echo get_credentials()['site_root']?>/ru/<?php echo $psicologo_name ?>/chat">Консультация в <br />чате</a> 
 							<?php elseif ($metodo['titulo']=='phone'): ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/ru/formphone.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Консультация по <br />телефону</a> 
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/ru/<?php echo $psicologo_name ?>/phone">Консультация по <br />телефону</a> 
 							<?php else: ?>
-							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/ru/formvideoconference.php?id_psicologo=<?php echo $psicologo['id_psicologo'] ?>">Консультация по <br />видео конференции</a>
+							<a class="standardsButton wm" href="<?php echo get_credentials()['site_root']?>/ru/<?php echo $psicologo_name ?>/videoconference">Консультация по <br />видео конференции</a>
 						<?php endif; endforeach; ?>
 						</div>
 					</div>

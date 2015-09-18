@@ -64,8 +64,16 @@ function get_url_by_psicologo_name($name) {
     return str_replace(' ', '-', $url);
 }
 
-function get_psicologo_name_url($psicologo) {
-    return get_url_by_psicologo_name($psicologo['nombres_apellidos']);
+function get_psicologo_name_url($psicologo, $other = false, $right = false) {
+    if (!$other)
+        return get_url_by_psicologo_name($psicologo['nombres_apellidos']);
+    else {
+        $other_name = explode('-', $psicologo['nombres_apellidos']);
+        if ($right)
+            return get_url_by_psicologo_name($other_name[1]);
+        else
+            return get_url_by_psicologo_name($other_name[0]);
+    }
 }
 
 // if $_GET['id_psicologo'] isn't defined get the name $_GET['p']

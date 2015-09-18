@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	DirectoryIndex index.php index.html
+
+	RewriteBase /ru
+
+    ### Russian ###
+    RewriteRule ^([a-z-]+)$ /ru/bookwith.php?p=$1
+    RewriteRule ^([a-z-]+)/email$ /ru/formemail.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/chat$ /ru/formchat.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/videoconference$ /ru/formvideoconference.php?p=$1 [L]
+    RewriteRule ^([a-z-]+)/phone$ /ru/formphone.php?p=$1 [L]
+
+    ## HTTPS FORMS ##
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ruformofis.php$ ru/ruformofis.php
+</IfModule>
