@@ -12,6 +12,10 @@ function get_psicologo_id_by_name($name,$charset='utf-8') {
 	$conn->set_charset($charset);
 	$sql = "SELECT id as id_psicologo FROM psicologo WHERE nombres_apellidos LIKE '%{$name}%'";
 	$result = $conn->query($sql);
+    if ($result->num_rows === 0 && isset($psicologo[2])) {
+        $sql = "SELECT id as id_psicologo FROM psicologo WHERE nombres_apellidos LIKE '%{$psicologo[0]}%{$psicologo[2]}%'";
+        $result = $conn->query($sql);
+    }
     $assoc = $result->fetch_assoc();
 	return (int)$assoc['id_psicologo'];
 }
