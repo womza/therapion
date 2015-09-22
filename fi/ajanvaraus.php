@@ -150,10 +150,10 @@
  
  							<div class="photo rgt">
 								<img src="../assets/images/therapion-logo.jpg" height="150" width="100">							 
-								<a class="standardsButton " href="./fiformkartoitus.php">Yhteydet</a>
+								<a class="standardsButton " href="https://www.therapion.com/fi/fiformasiakaspalvelu.php">Yhteydet</a>
 							</div>
 							
-							<h4><a href="./fiformkartoitus.php">Asiakaspalvelu</a></h4>
+							<h4><a href="https://www.therapion.com/fi/fiformasiakaspalvelu.php">Asiakaspalvelu</a></h4>
 														 
 							<p>
                                                         Asiakaspalvelu auttaa mielell‰‰n kaikissa palveluun liittyviss‰ asioissa.

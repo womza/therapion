@@ -1,3 +1,4 @@
+<?php require_once '../db_conn.php'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
 <head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -182,7 +183,11 @@ sopivia kotitehtäviä. Menetelmä sopii useisiin yksilöpsykologian tilanteisiin (s
                                                <div class="profile">
                                                        <div class="photo lft">
 								<img src="../assets/images/profiles/helena.jpg" height="150" width="100">							 
-								 <a class="standardsButton " href="./bookwith.php?id_psicologo=32">Varaa palvelu</a>
+								<?php
+								$psicologo = get_psicologo(32);
+								$psicologo_name = get_psicologo_name_url($psicologo);
+								?>
+								 <a class="standardsButton " href="./<?php echo $psicologo_name ?>">Varaa palvelu</a>
 							</div>	
  
 
@@ -217,25 +222,32 @@ Tässä uusia artikkeleita ja haastatteluja koskien psykologiaa, psykoterapiaa, ih
 						
 						<ul class="external-links">
 
-                                                         
+                                                          
 
 
 							<li>
-								<a href="http://www.ilkka.fi/uutiset/maakunta/nettiterapia-vaihtoehto-perinteiselle-live-terapialle-1.1784152">
-									Nettiterapia vaihtoehto perinteiselle
+								<a href="http://nettiterapia.blogspot.com">
+                                                                        Ratkaisukeskeinen lähestyminen parisuhteeseen 
 									<img src="../assets/images/external-link.png" />
 								</a>
 								
 							</li>
 							<li>
-								<a href="http://nettiterapia.blogspot.com/2013/05/psykoterapeutti-netissa-ollako-vai-eiko.html">
-									Ollako vai eikö olla - parisuhdekysymyksiä
+								<a href="https://verkkoterapia.wordpress.com/2015/09/09/tavoitteet-ja-sisainen-kriitikko/">
+									Tavoitteet ja sisäinen kriitikko
 									<img src="../assets/images/external-link.png" />
 								</a>
 							</li>
+                                                        <li>
+								<a href="https://verkkoterapia.wordpress.com/2015/09/09/psykoterapia-ja-posttraumaattinen-kasvu/">
+									Posttraumaattinen kasvu
+									<img src="../assets/images/external-link.png" />
+								</a>
+							</li>
+
 							<li>
-								<a href="http://youtu.be/SIiCjcBNFOU">
-									Video: Nettiterapia tutuksi
+								<a href="./haastattelut.php">
+									Therapion mediassa - lue haastatteluja!
 									<img src="../assets/images/external-link.png" />
 								</a>
 							</li>

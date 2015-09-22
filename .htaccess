@@ -303,8 +303,8 @@ RewriteRule ^mergers\.php$ "http\:\/\/www\.therapion\.com\/news\.php" [R=301,L]
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^jatko$ "http\:\/\/www\.therapion\.com\/fi\/fiformjatko\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^uravalmennus\.php$ "http\:\/\/www\.therapion\.com\/fi\/uravalmennus\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^uravalmennus\.php$ "http\:\/\/www\.therapion\.com\/fi\/uravalmennus\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^fikonsultaatiohelena\.php$ "http\:\/\/www\.therapion\.com\/fi\/fikonsultaatiohelena\.php" [R=301,L]
@@ -616,8 +616,8 @@ deny from 220.250.5.36
 deny from 175.42.27.158
 deny from 195.211.155.153
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^fi\/fiformkartoitus\.php$ "http\:\/\/www\.therapion\.com\/fi\/fiformasiakaspalvelu\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^fi\/fiformkartoitus\.php$ "http\:\/\/www\.therapion\.com\/fi\/fiformasiakaspalvelu\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^psicologo\-online\.php$ "http\:\/\/www\.therapion\.com\/es\/" [R=301,L]
@@ -842,8 +842,8 @@ RewriteRule ^frconsultationmuriel\.php$ "http\:\/\/www\.therapion\.com\/fr\/frco
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^unternehmen\.php$ "http\:\/\/www\.therapion\.com\/de\/stellenangebote\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^hinnasto\.php$ "http\:\/\/www\.therapion\.com\/fi\/hinnasto\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^hinnasto\.php$ "http\:\/\/www\.therapion\.com\/fi\/hinnasto\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^ptchamadanuno\.php$ "http\:\/\/www\.therapion\.com\/pt" [R=301,L]
