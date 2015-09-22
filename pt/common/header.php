@@ -14,7 +14,7 @@
 				
 				<div id="icon-menu"></div>	
 					<div id="logo">
-							<a href="http://www.therapion.local/pt/" title="Bem-vindo ao Therapion Consulting. Therapion.com - Atención psicológica e terapia na Internet.">
+							<a href="http://www.therapion.com/pt/" title="Bem-vindo ao Therapion Consulting. Therapion.com - Atención psicológica e terapia na Internet.">
 								Therapion
 								<span></span>
 							</a>
@@ -29,101 +29,101 @@
 		<div class="inner">			
 			<div id="main-nav" >
 				<ul>
-					<li><a href="http://www.therapion.local/pt/">Início</a></li>
-					<li><a href="http://www.therapion.local/pt/consulta.php">Consultas</a></li>
-					<li><a href="http://www.therapion.local/pt/custo.php">Preços</a></li>
-					<li><a href="http://www.therapion.local/pt/servicos.php">Serviços</a></li>
-					<li><a href="http://www.therapion.local/pt/empregos.php">Empregos</a></li>
+					<li><a href="http://www.therapion.com/pt/">Início</a></li>
+					<li><a href="http://www.therapion.com/pt/consulta.php">Consultas</a></li>
+					<li><a href="http://www.therapion.com/pt/custo.php">Preços</a></li>
+					<li><a href="http://www.therapion.com/pt/servicos.php">Serviços</a></li>
+					<li><a href="http://www.therapion.com/pt/empregos.php">Empregos</a></li>
 					<li class="last"><a href="#">Idioma</a>
 						<div>
 						<ul>
 							<li  class="first">
-								<a href="http://www.therapion.local"> 
+								<a href="http://www.therapion.com"> 
 									<img src="../assets/images/flag_en.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="English"> 
 									English
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.local/es"> 
+								<a href="http://www.therapion.com/es"> 
 									<img src="../assets/images/flag_es.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Español"> 
 									Español
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.local/pt"> 
+								<a href="http://www.therapion.com/pt"> 
 									<img src="../assets/images/flag_pt.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Português"> 
 									Português
 								</a>  
 							</li>
 
                                                         <li>
-								<a href="http://www.therapion.local/fi"> 
+								<a href="http://www.therapion.com/fi"> 
 									<img src="../assets/images/flag_fi.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Suomi"> 
 									Suomi
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.local/se"> 
+								<a href="http://www.therapion.com/se"> 
 									<img src="../assets/images/flag_se.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Svenska"> 
 									Svenska
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.local/no"> 
+								<a href="http://www.therapion.com/no"> 
 									<img src="../assets/images/flag_no.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Norsk"> 
 									Norsk
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.local/dk"> 
+								<a href="http://www.therapion.com/dk"> 
 									<img src="../assets/images/flag_dk.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Dansk"> 
 									Dansk
 								</a>  
 							</li>
                                                         <li>
-								<a href="http://www.therapion.local/de"> 
+								<a href="http://www.therapion.com/de"> 
 									<img src="../assets/images/flag_de.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title=Deutsch> 
 									Deutsch
 								</a>  
 							</li>
                                                         <li>
-								<a href="http://www.therapion.local/nl"> 
+								<a href="http://www.therapion.com/nl"> 
 									<img src="../assets/images/flag_nl.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Nederlands"> 
 									Nederlands
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.local/fr"> 
+								<a href="http://www.therapion.com/fr"> 
 									<img src="../assets/images/flag_fr.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Français"> 
 									Français
 								</a>  
 							</li>													
 							<li>
-								<a href="http://www.therapion.local/it"> 
+								<a href="http://www.therapion.com/it"> 
 									<img src="../assets/images/flag_it.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Italiano"> 
 									Italiano
 								</a>  
 							</li>							
 							<li>
-								<a href="http://www.therapion.local/ru"> 
+								<a href="http://www.therapion.com/ru"> 
 									<img src="../assets/images/flag_ru.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="&#1055;&#1086;-&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;"> 
 									&#1055;&#1086;-&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.local/tr"> 
+								<a href="http://www.therapion.com/tr"> 
 									<img src="../assets/images/flag_tr.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="Türkçe"> 
 									Türkçe
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.local/jp"> 
+								<a href="http://www.therapion.com/jp"> 
 									<img src="../assets/images/flag_jp.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="&#26085;&#26412;&#35486;"> 
 									&#26085;&#26412;&#35486;
 								</a>							
 							</li>										
 							<li  class="last">
-								<a href="http://www.therapion.local/cn"> 
+								<a href="http://www.therapion.com/cn"> 
 									<img src="../assets/images/flag_hk.gif" width="15" height="10" align="bottom" vspace="6" hspace="1" border="0" title="&#20013;&#25991;"> 
 									 &#20013;&#25991;
 								</a>  

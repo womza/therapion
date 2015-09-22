@@ -857,8 +857,8 @@ RewriteRule ^konsunatalia\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsunatalia
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^onrain\.php$ "http\:\/\/www\.therapion\.com\/jp" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^programas\-de\-terapia\.php$ "http\:\/\/www\.therapion\.com\/es\/programas\-de\-terapia\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^programas\-de\-terapia\.php$ "http\:\/\/www\.therapion\.com\/es\/programas\-de\-terapia\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^expat\-counseling\.php$ "http\:\/\/www\.therapion\.com\/expat\-counseling\-coaching\.php" [R=301,L]
@@ -902,8 +902,8 @@ RewriteRule ^ru\/konsunatalia\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsulta
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^es\/reservaciones\.php$ "http\:\/\/www\.therapion\.com\/es\/consultas\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^programas\-de\-terapia\-e\-auto\-ajuda\.php$ "http\:\/\/www\.therapion\.com\/pt\/programas\-de\-terapia\-e\-auto\-ajuda\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^programas\-de\-terapia\-e\-auto\-ajuda\.php$ "http\:\/\/www\.therapion\.com\/pt\/programas\-de\-terapia\-e\-auto\-ajuda\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^es\/blog\/tag\/padres\/$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]

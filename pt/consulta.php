@@ -145,10 +145,10 @@
  
  							<div class="photo rgt">
 								<img src="../assets/images/therapion-logo.jpg" height="150" width="100">							 
-								<a class="standardsButton " href="./ptformservicoaocliente.php">Contato</a>
+								<a class="standardsButton " href="https://www.therapion.com/pt/ptformservicoaocliente.php">Contato</a>
 							</div>
 							
-							<h4><a href="./ptformservicoaocliente.php">Serviço ao cliente</a></h4>
+							<h4><a href="https://www.therapion.com/pt/ptformservicoaocliente.php">Serviço ao cliente</a></h4>
 														 
 							
 							

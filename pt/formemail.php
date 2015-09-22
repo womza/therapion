@@ -34,7 +34,7 @@
 							<h3>Consulta por e-mail</h3>     
 						
                                                 <p>
-						<a  class="link" href="./ptinstrucoesemail.php">Instruções: Como usar o serviço <img src="../assets/images/internal-link.png" /> </a>
+						<a  class="link" href="/pt/ptinstrucoesemail.php">Instruções: Como usar o serviço <img src="../assets/images/internal-link.png" /> </a>
 						</p>
 
     				

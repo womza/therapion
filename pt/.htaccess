@@ -14,5 +14,5 @@
 
     ## HTTPS FORMS ##
     RewriteCond %{HTTPS} off
-    RewriteRule ^ptformservicoaocliente.php$ pt/ptformservicoaocliente.php
+    RewriteRule ^ptformservicoaocliente.php$ ptformservicoaocliente.php
 </IfModule>

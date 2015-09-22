@@ -62,7 +62,7 @@ function get_url_by_psicologo_name($name) {
         $url .= str_clean($value) . ' ';
     $url = trim($url);
     
-    return str_replace(' ', '-', $url);
+    return strtolower(str_replace(' ', '-', $url));
 }
 
 function get_psicologo_name_url($psicologo, $other = false, $right = false) {

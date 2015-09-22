@@ -32,7 +32,7 @@
                                                 </p>
 <p>
 <b>
-NOTA: Para as perguntas psicológicas se necesita uma consulta. <a href="./consulta.php">Faça a sua reserva</a>
+NOTA: Para as perguntas psicológicas se necesita uma consulta. <a href="http://www.therapion.com/pt/consulta.php">Faça a sua reserva</a>
 </b>
 </p>
 

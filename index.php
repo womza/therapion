@@ -66,78 +66,78 @@ We offer private online counseling sessions by email, chat, phone, and video con
 						<div id="switcher-lang-scd">
 						<ul>
 							<li  class="first">
-								<a href="http://www.therapion.com"> 
+								<a href="http://104.131.79.230"> 
 									<img src="./assets/images/flag_en.png" title="English">
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/es"> 
+								<a href="http://104.131.79.230/es"> 
 									<img src="./assets/images/flag_es.png" title="Español">
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/pt"> 
+								<a href="http://104.131.79.230/pt"> 
 									<img src="./assets/images/flag_pt.png" title="Português">
 								</a>  
 							</li>
 
                                                         <li>
-								<a href="http://www.therapion.com/fi"> 
+								<a href="http://104.131.79.230/fi"> 
 									<img src="./assets/images/flag_fi.png" title="Suomi">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/se"> 
+								<a href="http://104.131.79.230/se"> 
 									<img src="./assets/images/flag_se.png" title="Svenska">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/no"> 
+								<a href="http://104.131.79.230/no"> 
 									<img src="./assets/images/flag_no.png" title="Norsk">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/dk"> 
+								<a href="http://104.131.79.230/dk"> 
 									<img src="./assets/images/flag_dk.png" title="Dansk">
 								</a>  
 							</li>
                             <li>
-								<a href="http://www.therapion.com/de"> 
+								<a href="http://104.131.79.230/de"> 
 									<img src="./assets/images/flag_de.png" title=Deutsch>
 								</a>  
 							</li>
                                                         <li>
-								<a href="http://www.therapion.com/nl"> 
+								<a href="http://104.131.79.230/nl"> 
 									<img src="./assets/images/flag_nl.png" title="Nederlands">
 								</a>  
 							</li>
 							<li>
-								<a href="http://www.therapion.com/fr"> 
+								<a href="http://104.131.79.230/fr"> 
 									<img src="./assets/images/flag_fr.png" title="Français">
 								</a>  
 							</li>													
 							<li>
-								<a href="http://www.therapion.com/it"> 
+								<a href="http://104.131.79.230/it"> 
 									<img src="./assets/images/flag_it.png" title="Italiano">
 								</a>  
 							</li>							
 							<li>
-								<a href="http://www.therapion.com/ru"> 
+								<a href="http://104.131.79.230/ru"> 
 									<img src="./assets/images/flag_ru.png" title="&#1055;&#1086;-&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/tr"> 
+								<a href="http://104.131.79.230/tr"> 
 									<img src="./assets/images/flag_tr.png" title="Türkçe">
 								</a>  
 							</li>	
 							<li>
-								<a href="http://www.therapion.com/jp"> 
+								<a href="http://104.131.79.230/jp"> 
 									<img src="./assets/images/flag_jp.png" title="&#26085;&#26412;&#35486;"> 
 								</a>							
 							</li>										
 							<li  class="last">
-								<a href="http://www.therapion.com/cn"> 
+								<a href="http://104.131.79.230/cn"> 
 									<img src="./assets/images/flag_hk.png" title="&#20013;&#25991;">
 								</a>  
 							</li>						
