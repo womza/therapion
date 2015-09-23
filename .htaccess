@@ -216,23 +216,23 @@ RewriteRule ^fr\/paiement\.php$ "http\:\/\/www\.therapion\.com\/fr\/paiements\.p
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^programme\-de\-therapie\.php$ "http\:\/\/www\.therapion\.com\/fr\/programme\-de\-therapie\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^angebot\.php$ "http\:\/\/www\.therapion\.com\/de\/angebot\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^angebot\.php$ "http\:\/\/www\.therapion\.com\/de\/angebot\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^kosten\.php$ "http\:\/\/www\.therapion\.com\/de\/kosten\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^kosten\.php$ "http\:\/\/www\.therapion\.com\/de\/kosten\.php" [R=301,L]
 
 #RewriteCond %{HTTP_HOST} ^.*$
 #RewriteRule ^termine\.php$ "http\:\/\/www\.therapion\.com\/de\/termine\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^stellenangebote\.php$ "http\:\/\/www\.therapion\.com\/de\/stellenangebote\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^stellenangebote\.php$ "http\:\/\/www\.therapion\.com\/de\/stellenangebote\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^therapieprogramm\.php$ "http\:\/\/www\.therapion\.com\/de\/therapieprogramm\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^therapieprogramm\.php$ "http\:\/\/www\.therapion\.com\/de\/therapieprogramm\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^karrierecoaching\.php$ "http\:\/\/www\.therapion\.com\/de\/karrierecoaching\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^karrierecoaching\.php$ "http\:\/\/www\.therapion\.com\/de\/karrierecoaching\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^anleitung\.php$ "http\:\/\/www\.therapion\.com\/de\/anleitung\.php" [R=301,L]
@@ -703,8 +703,8 @@ deny from 146.0.74.205
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^tr\/fiyatlari\.php$ "http\:\/\/www\.therapion\.com\/tr\/odeme\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^zahlungen\.php$ "http\:\/\/www\.therapion\.com\/de\/zahlungen\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^zahlungen\.php$ "http\:\/\/www\.therapion\.com\/de\/zahlungen\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^tr\/trrandevudeniz\.php$ "http\:\/\/www\.therapion\.com\/tr\/randevu\.php" [R=301,L]

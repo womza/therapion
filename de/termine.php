@@ -142,10 +142,10 @@
  
  							<div class="photo lft">
 								<img src="../assets/images/therapion-logo.jpg" height="150" width="100">							 
-								<a class="standardsButton " href="./deformkundenservice.php">Kontakt</a>
+								<a class="standardsButton " href="https://www.therapion.com/de/deformkundenservice.php">Kontakt</a>
 							</div>
 							
-							<h4><a href="./deformkundenservice.php">Kundenservice</a></h4>
+							<h4><a href="https://www.therapion.com/de/deformkundenservice.php">Kundenservice</a></h4>
 														 
 							<p>
                                                        Haben Sie Fragen zu unseren Angeboten?
