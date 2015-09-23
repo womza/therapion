@@ -12,7 +12,7 @@
 						<div id="foot-nav">
 							<ul>
 								<li><a href="../sitemap.xml" target="_blank">Sitemap(XML)</a></li>
-								<li class="last"><a href="./nlformklantenservice.php" target="_blank">Contact</a></li>						
+								<li class="last"><a href="https://www.therapion.com/nl/nlformklantenservice.php" target="_blank">Contact</a></li>						
 							</ul>
 						</div>						
 					</div>

@@ -140,10 +140,10 @@
  
  							<div class="photo rgt">
 								<img src="../assets/images/profiles/klantenservice.jpg" height="150" width="100">							 
-								<a class="standardsButton " href="./nlformklantenservice.php">Contact</a>
+								<a class="standardsButton " href="https://www.therapion.com/nl/nlformklantenservice.php">Contact</a>
 							</div>
 							
-							<h4><a href="./nlformklantenservice.php">Klantenservice</a></h4>						 
+							<h4><a href="https://www.therapion.com/nl/nlformklantenservice.php">Klantenservice</a></h4>						 
 						 
 							
 							 
