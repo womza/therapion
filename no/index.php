@@ -1,3 +1,4 @@
+<?php require_once '../db_conn.php'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="no" lang="no">
 <head>
@@ -148,7 +149,11 @@
                                               <div class="profile">
  							<div class="photo lft">
 								<img src="../assets/images/profiles/thomas.jpg" height="150" width="100">							 
-								<a class="standardsButton " href="./bookwith.php?id_psicologo=64">Bestill nå!</a>
+								<?php
+								$psicologo = get_psicologo(64);
+								$psicologo_name = get_psicologo_name_url($psicologo);
+								?>
+								<a class="standardsButton " href="./<?php echo $psicologo_name ?>">Bestill nå!</a>
 							</div>
 
                                                         </p>                                         

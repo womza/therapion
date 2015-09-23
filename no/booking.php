@@ -133,10 +133,10 @@
  
  							<div class="photo rgt">
 								<img src="../assets/images/kundeservice.jpg" height="150" width="100">							 
-								<a class="standardsButton " href="./noformkundeservice.php">Kontakt</a>
+								<a class="standardsButton " href="https://www.therapion.com/no/noformkundeservice.php">Kontakt</a>
 							</div>
 							
-							<h4><a href="./noformkundeservice.php">Kundeservice</a></h4>
+							<h4><a href="https://www.therapion.com/no/noformkundeservice.php">Kundeservice</a></h4>
 														 
 													  
 							

@@ -183,8 +183,8 @@ RewriteRule ^bestillinger\.php$ "http\:\/\/www\.therapion\.com\/no\/bestillinger
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^betalinger\.php$ "http\:\/\/www\.therapion\.com\/no\/betalinger\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^ledige\-jobber\.php$ "http\:\/\/www\.therapion\.com\/no\/ledige\-jobber\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^ledige\-jobber\.php$ "http\:\/\/www\.therapion\.com\/no\/ledige\-jobber\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^nokonsultasjonerole\.php$ "http\:\/\/www\.therapion\.com\/no\/nokonsultasjonerole\.php" [R=301,L]
@@ -1388,8 +1388,8 @@ RewriteRule ^es\/precios\.php$ "http\:\/\/www\.therapion\.com\/es\/costo\.php" [
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^es\/articulos\/adolescentes\-y\-padres\-hay\-entendimiento\.php$ "http\:\/\/www\.therapion\.com\/es" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^Etiske_prinsipper_for_nordiske_psykologer\.pdf$ "http\:\/\/www\.therapion\.com\/no\/Etiske_prinsipper_for_nordiske_psykologer\.pdf" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^Etiske_prinsipper_for_nordiske_psykologer\.pdf$ "http\:\/\/www\.therapion\.com\/no\/Etiske_prinsipper_for_nordiske_psykologer\.pdf" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^ru\/ruliveuslugisvetlana\.php$ "http\:\/\/www\.therapion\.com\/ru\/konsultacija\.php" [R=301,L]
