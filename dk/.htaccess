@@ -13,6 +13,6 @@
     RewriteRule ^([a-z-]+)/telefon$ /dk/formphone.php?p=$1 [L]
 
     ## HTTPS FORMS ##
-    #RewriteCond %{HTTPS} off
+    RewriteCond %{HTTPS} off
     RewriteRule ^dkformkundeservice.php$ dk/dkformkundeservice.php
 </IfModule>

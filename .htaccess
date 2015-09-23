@@ -159,8 +159,8 @@ RewriteRule ^vacantures\.php$ "http\:\/\/www\.therapion\.com\/nl\/vacantures\.ph
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^konsultation\.php$ "http\:\/\/www\.therapion\.com\/dk\/konsultation\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^ledige\-stillinger\.php$ "http\:\/\/www\.therapion\.com\/dk\/ledige\-stillinger\.php" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^.*$
+#RewriteRule ^ledige\-stillinger\.php$ "http\:\/\/www\.therapion\.com\/dk\/ledige\-stillinger\.php" [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^dkkonsultationerkaren\.php$ "http\:\/\/www\.therapion\.com\/dk\/dkkonsultationerkaren\.php" [R=301,L]
